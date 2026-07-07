@@ -1,0 +1,132 @@
+{
+  "month": "2026-07",
+  "days": {
+    "2026-07-01": {
+      "status": "UNAVAILABLE",
+      "note": "early out"
+    },
+    "2026-07-02": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2026-07-03": {
+      "status": "AVAILABLE",
+      "note": "early out"
+    },
+    "2026-07-04": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2026-07-05": {
+      "status": "PM",
+      "note": ""
+    },
+    "2026-07-06": {
+      "status": "AM",
+      "note": ""
+    },
+    "2026-07-07": {
+      "status": "AM",
+      "note": ""
+    },
+    "2026-07-08": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2026-07-09": {
+      "status": "AM",
+      "note": ""
+    },
+    "2026-07-10": {
+      "status": "AM",
+      "note": ""
+    },
+    "2026-07-11": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2026-07-12": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2026-07-13": {
+      "status": "AM",
+      "note": ""
+    },
+    "2026-07-14": {
+      "status": "AM",
+      "note": ""
+    },
+    "2026-07-15": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2026-07-16": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2026-07-17": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2026-07-18": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2026-07-19": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2026-07-20": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2026-07-21": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2026-07-22": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2026-07-23": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2026-07-24": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2026-07-25": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2026-07-26": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2026-07-27": {
+      "status": "PM",
+      "note": ""
+    },
+    "2026-07-28": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2026-07-29": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2026-07-30": {
+      "status": "AM",
+      "note": ""
+    },
+    "2026-07-31": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    }
+  },
+  "global_notes": [],
+  "employee_id": "EMP-1015 (synthetic)",
+  "render_style": "clean"
+}
