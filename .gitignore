@@ -1,0 +1,17 @@
+# Secrets - never commit keys. This file must exist in the FIRST commit.
+.env
+.env.*
+*.key
+*_API_KEY*
+
+# Raw API responses (regenerable; may be large)
+results/raw/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS/editor
+.DS_Store
+Thumbs.db
