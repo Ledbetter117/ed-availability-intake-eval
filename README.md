@@ -13,9 +13,26 @@
 
 ## Results
 
-<!-- RESULTS_TABLE_PLACEHOLDER — populated from results/summary.md after the scored run.
-     Headline: critical-error rate first, raw and honest. Charts from results/charts/. -->
-> **Status:** dataset and harness complete; scored run pending. This section receives the real numbers — including failures — when the run lands. No results will be summarized, smoothed, or cherry-picked.
+**Scored 2026-08-13 · Anthropic API · single run per model · all 40 cases · zero format retries on either model.**
+
+**Headline first — the dangerous flip.** `claude-sonnet-5`: **0 critical flips across 316 gold-UNAVAILABLE days (0.0%)**. `claude-haiku-4-5`: **6 flips across the same 316 days (1.9%)** — all six on degraded slices (5 lowcontrast, 1 rotated), peaking at **5.7%** on lowcontrast.
+
+| Metric (overall, 40 cases) | claude-sonnet-5 | claude-haiku-4-5 |
+|---|---|---|
+| **Critical-error rate** (UNAVAILABLE→available) | **0.0%** | **1.9%** |
+| Day-level accuracy | 100.0% | 97.9% |
+| Hallucination rate (notes) | 0.7% | 6.2% |
+| Note fidelity (normalized match) | 100.0% | 93.2% |
+| Format validity | 100.0% | 100.0% |
+
+Per-slice breakdowns: [`results/summary.md`](results/summary.md) (Sonnet) · [`results_haiku/summary.md`](results_haiku/summary.md) (Haiku). Row-level data in each folder's `per_case.csv`.
+
+**The honest finding: Sonnet 5 saturates this benchmark.** 100% day-level accuracy on every slice, including handwritten, with zero robustness delta. Its only error in 40 cases: one duplicated note — the real "charge only" annotation from July 2 also asserted on the empty July 1 cell (`sample_01_clean`). Saturation is a result, not a disappointment: it dates this difficulty tier against the frontier and motivates the v2 tier on the roadmap.
+
+**Haiku's failures are geometric, not glyphic.** Its handwritten slice is perfect; the errors cluster in spatial indexing. Worst case: a one-day grid shift on a faint calendar (`sample_11_lowcontrast`) misread 9 days and produced 3 phantom-available days in a single document. Under rotation, notes landed exactly one week-row down (`sample_02_rotated`: "no call" 18th→25th, "early out" 24th→31st). Every failure is traced with raw output in [`analysis.md`](analysis.md).
+
+![Haiku day accuracy by slice](results_haiku/charts/day_accuracy_by_slice.png)
+![Haiku error breakdown](results_haiku/charts/error_breakdown.png)
 
 ---
 
@@ -68,9 +85,11 @@ python3 generate_dataset.py --n 40 --seed 7     # rebuild the dataset (or use da
 export ANTHROPIC_API_KEY=...                     # or OPENAI_API_KEY for gpt-* models
 python3 run_eval.py --model claude-sonnet-5 --limit 4   # cheap sanity run first
 python3 run_eval.py --model claude-sonnet-5             # full 40-case run
+python3 run_eval.py --model claude-haiku-4-5 --out ./results_haiku   # second-model run, as published
 python3 run_eval.py --model gpt-4o                       # provider inferred from model string
 
 python3 make_charts.py                           # renders results/charts/*.png
+python3 make_charts.py --results ./results_haiku # charts for the second-model run
 ```
 Outputs: `results/metrics.json` (aggregates), `results/per_case.csv` (row-level), `results/summary.md` (README-ready table), `results/raw/` (raw model output per case, gitignored).
 
@@ -101,7 +120,9 @@ ed-availability-intake-eval/
 ├── make_charts.py         # results charts (matplotlib)
 ├── assets/fonts/          # Patrick Hand (OFL 1.1) for the handwritten slice
 ├── data/                  # 40 generated images + .gold.json (regenerable)
-├── results/               # metrics.json, per_case.csv, summary.md, charts/
+├── results/               # claude-sonnet-5 run: metrics.json, per_case.csv, summary.md, charts/
+├── results_haiku/         # claude-haiku-4-5 run: same layout
+├── V2_TIER_DESIGN.md      # next difficulty tier (v1 frozen; Sonnet saturated it)
 └── analysis.md            # failure-mode writeup traced to per_case.csv rows
 ```
 
@@ -109,10 +130,12 @@ ed-availability-intake-eval/
 - [x] Spec + synthetic generator
 - [x] 40-case dataset across 4 difficulty slices (incl. handwritten)
 - [x] Extraction + scoring harness, dual-provider
-- [ ] Scored run + charts
-- [ ] Failure-mode analysis + guardrails (`analysis.md`)
+- [x] Scored run + charts (claude-sonnet-5 + claude-haiku-4-5, 2026-08-13)
+- [x] Failure-mode analysis + guardrails (`analysis.md`)
 - [ ] Run-to-run variance check
 - [ ] 2-page PDF case study + LinkedIn Featured post
+- [ ] v2 difficulty tier — Sonnet saturated v1 (design: `V2_TIER_DESIGN.md`)
+- [ ] Automated harness search over this eval (Meta-Harness, Stanford IRIS Lab) — can an optimized harness close the Haiku→Sonnet gap?
 
 ---
 *100% synthetic data. No PHI, no employer data, no real schedules — by construction, not by policy.*
