@@ -1,0 +1,61 @@
+{
+  "model": "claude-sonnet-5",
+  "cases": 40,
+  "overall": {
+    "cases": 40,
+    "day_accuracy": 1.0,
+    "critical_error_rate": 0.0,
+    "critical_flips": 0,
+    "gold_unavailable_days": 316,
+    "hallucination_rate": 0.006802721088435374,
+    "note_fidelity": 1.0,
+    "format_validity": 1.0
+  },
+  "per_slice": {
+    "clean": {
+      "cases": 10,
+      "day_accuracy": 1.0,
+      "critical_error_rate": 0.0,
+      "critical_flips": 0,
+      "gold_unavailable_days": 65,
+      "hallucination_rate": 0.023809523809523808,
+      "note_fidelity": 1.0,
+      "format_validity": 1.0
+    },
+    "handwritten": {
+      "cases": 10,
+      "day_accuracy": 1.0,
+      "critical_error_rate": 0.0,
+      "critical_flips": 0,
+      "gold_unavailable_days": 89,
+      "hallucination_rate": 0.0,
+      "note_fidelity": 1.0,
+      "format_validity": 1.0
+    },
+    "lowcontrast": {
+      "cases": 10,
+      "day_accuracy": 1.0,
+      "critical_error_rate": 0.0,
+      "critical_flips": 0,
+      "gold_unavailable_days": 87,
+      "hallucination_rate": 0.0,
+      "note_fidelity": 1.0,
+      "format_validity": 1.0
+    },
+    "rotated": {
+      "cases": 10,
+      "day_accuracy": 1.0,
+      "critical_error_rate": 0.0,
+      "critical_flips": 0,
+      "gold_unavailable_days": 75,
+      "hallucination_rate": 0.0,
+      "note_fidelity": 1.0,
+      "format_validity": 1.0
+    }
+  },
+  "robustness_delta_vs_clean": {
+    "handwritten": 0.0,
+    "lowcontrast": 0.0,
+    "rotated": 0.0
+  }
+}
