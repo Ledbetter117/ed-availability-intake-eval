@@ -1,0 +1,61 @@
+{
+  "model": "claude-haiku-4-5",
+  "cases": 40,
+  "overall": {
+    "cases": 40,
+    "day_accuracy": 0.979032258064516,
+    "critical_error_rate": 0.0189873417721519,
+    "critical_flips": 6,
+    "gold_unavailable_days": 316,
+    "hallucination_rate": 0.06206896551724138,
+    "note_fidelity": 0.9315068493150684,
+    "format_validity": 1.0
+  },
+  "per_slice": {
+    "clean": {
+      "cases": 10,
+      "day_accuracy": 1.0,
+      "critical_error_rate": 0.0,
+      "critical_flips": 0,
+      "gold_unavailable_days": 65,
+      "hallucination_rate": 0.024390243902439025,
+      "note_fidelity": 0.975609756097561,
+      "format_validity": 1.0
+    },
+    "handwritten": {
+      "cases": 10,
+      "day_accuracy": 1.0,
+      "critical_error_rate": 0.0,
+      "critical_flips": 0,
+      "gold_unavailable_days": 89,
+      "hallucination_rate": 0.0,
+      "note_fidelity": 1.0,
+      "format_validity": 1.0
+    },
+    "lowcontrast": {
+      "cases": 10,
+      "day_accuracy": 0.9419354838709678,
+      "critical_error_rate": 0.05747126436781609,
+      "critical_flips": 5,
+      "gold_unavailable_days": 87,
+      "hallucination_rate": 0.03125,
+      "note_fidelity": 0.96875,
+      "format_validity": 1.0
+    },
+    "rotated": {
+      "cases": 10,
+      "day_accuracy": 0.9741935483870968,
+      "critical_error_rate": 0.013333333333333334,
+      "critical_flips": 1,
+      "gold_unavailable_days": 75,
+      "hallucination_rate": 0.22580645161290322,
+      "note_fidelity": 0.75,
+      "format_validity": 1.0
+    }
+  },
+  "robustness_delta_vs_clean": {
+    "handwritten": 0.0,
+    "lowcontrast": 0.058064516129032184,
+    "rotated": 0.02580645161290318
+  }
+}
