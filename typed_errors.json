@@ -1,0 +1,37 @@
+{
+  "_schema": {
+    "_READ_THIS_FIRST": "The note categories are NOT all mutually exclusive. Summing them exceeds gold_note_items_examined. That is intended; see below.",
+    "status": "Cell-level. CRITICAL_FLIP | DISPLACED | MISREAD | OK partition the 1,240 day-cells per model. Sum == 1240.",
+    "notes": {
+      "partition": "NOTE_OK + NOTE_OMISSION == gold_note_items_examined (146). These two, and only these two, partition the gold notes.",
+      "overlay": "NOTE_DISPLACED is a SUBSET of NOTE_OK, not a sibling of it. A displaced note has correct text (so it is NOTE_OK) attached to the wrong day. Summing OK+OMISSION+DISPLACED double-counts the displaced ones.",
+      "note_displacement_rate": "NOTE_DISPLACED / gold_note_items_examined. sonnet 1/146 = 0.7%; haiku 9/146 = 6.2%. These are the README's 'Note displacement rate' row.",
+      "fabrication": "A fabricated note would be text absent from the page. There is no such category here because the count is zero for both models: 0/146 each, Wilson 95% upper 2.6%."
+    },
+    "relationship_to_calendar_level_csv": "DIFFERENT UNIT, SAME WORD. The 'displaced' column in calendar_level.csv is the CELL-level status DISPLACED (sonnet 0, haiku 19 of 1,240 cells). The README's 'Note displacement rate' is NOTE-level (this file). They are not the same quantity and will not agree; neither is derivable from the other."
+  },
+  "claude-sonnet-5": {
+    "status": {
+      "OK": 1240
+    },
+    "notes": {
+      "NOTE_OK": 146,
+      "NOTE_DISPLACED": 1
+    },
+    "gold_note_items_examined": 146
+  },
+  "claude-haiku-4-5": {
+    "status": {
+      "OK": 1214,
+      "CRITICAL_FLIP": 6,
+      "DISPLACED": 19,
+      "MISREAD": 1
+    },
+    "notes": {
+      "NOTE_OK": 136,
+      "NOTE_OMISSION": 10,
+      "NOTE_DISPLACED": 9
+    },
+    "gold_note_items_examined": 146
+  }
+}

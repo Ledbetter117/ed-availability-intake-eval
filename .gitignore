@@ -18,3 +18,13 @@ Thumbs.db
 
 # Real-world artifacts — NEVER commit or publish (employer data, internal identifiers)
 data_private/
+
+# Arm B private mapping — abstract document IDs to real photo filenames, months and the
+# writer's own encodings. The ONLY place those appear. Never commit, never publish.
+kit-B/private-map.json
+probe/kit-B/private-map.json
+**/private-map.json
+probe-run/
+probe_b_results/probe_b_results.json
+kit-B/*.gold.json
+probe/kit-B/*.gold.json
