@@ -191,7 +191,7 @@
     "tests/test_r74.py": "90fcbc6b8f5e1081a7a76910924c041a48e16af586c27fcef03588b52dc0a0cb",
     "tests/test_resume_reporting.py": "e9378ce143a3cd38f009bdad03ec4aa394f6dde89bb8e83fc8dd04dcaca61aa9",
     "tests/test_unlock_race.py": "40ae49991aae1903b12f3865ebc908d600e46240ff7c6844da8a9d081700c80e",
-    "tools/gitleaks.toml": "54b16d9ff88a47647e9bea1f9ea3c2e4a78f76289c83600fab1babd0eb8337ef",
+    "tools/gitleaks.toml": "7c92822065b1b9498d695a4f8e94dc69b6d312fef0d78301c41feceb63a8311c",
     "tools/public_release_guard.py": "7a206d1f81f677681f4cc8b408a57997578ef8f601370f25b29637f99076f7cc",
     "tools/render_paper.py": "9790f6ca1eac4cad6153ea047ed5420a1f0c08d9c1e423661adae9774d903fad",
     "tools/run_checks.py": "f6f879d1be572f7d8ca56c1a6759fbad2f86c7d6c3e4d4e6251e16624654f262",
