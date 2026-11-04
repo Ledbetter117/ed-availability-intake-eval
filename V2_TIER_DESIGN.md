@@ -1,6 +1,6 @@
 # V2 Difficulty Tier — Design (roadmap; v1 stays frozen)
 
-**Motivation:** the 2026-08-13 scored run shows `claude-sonnet-5` saturating v1 (100% day accuracy, 0 flips, all slices). v1 stays **frozen** as the published benchmark; v2 is an additive tier that restores discrimination at the frontier and widens the failure surface for harness search.
+**Motivation:** the saved 2026-08-13 run labelled `claude-sonnet-5` reached the v1 status ceiling (100% day accuracy, 0 flips, all slices). v1 stays **frozen** as the historical corpus; v2 is a proposed additive tier intended to test more varied inputs. Its ability to distinguish model performance remains to be evaluated.
 
 ## Design constraints (inherited, non-negotiable)
 

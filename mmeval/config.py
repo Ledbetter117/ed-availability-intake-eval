@@ -52,6 +52,13 @@ class ConfigError(ValueError):
     """A configuration that must not reach transport."""
 
 
+def safe_identifier(value):
+    """IDs are used in filenames and report rows; accept portable single components."""
+    return (isinstance(value, str) and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,127}", value) is not None
+            and not value.endswith(".") and value.split(".")[0].upper() not in
+            {"CON", "PRN", "AUX", "NUL", *(f"COM{i}" for i in range(1, 10)), *(f"LPT{i}" for i in range(1, 10))})
+
+
 def _host_is_loopback(host):
     if host in LOOPBACK_NAMES:
         return True
@@ -99,6 +106,8 @@ def validate_arm(arm, *, task_needs_image=True, data_class="public_synthetic", t
         raise ConfigError(f"{arm.get('arm_id')}: unknown field(s) {sorted(unknown)} (no fallback or override fields exist)")
     a = copy.deepcopy(arm)
     aid = a.get("arm_id") or "?"
+    if not safe_identifier(a.get("arm_id")):
+        raise ConfigError("arm_id must be a portable filename identifier (letters, numbers, dot, underscore or hyphen)")
     prov = a.get("provider")
     if prov not in PROVIDERS:
         raise ConfigError(f"{aid}: unknown provider {prov!r}; allowed: {sorted(PROVIDERS)}")

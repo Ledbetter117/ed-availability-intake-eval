@@ -15,10 +15,14 @@ commands += [[f"tests/{name}.py", "."] for name in (
     "test_resume_reporting", "test_r74", "test_probe_dispatch",
 )]
 commands += [["packaging/tests/test_release_wrapper.py", "packaging/run_ed_i.py"]]
+commands += [["tests/test_public_security.py"]]
 failed = []
 for args in commands:
     print("CHECK " + " ".join(args), flush=True)
-    code = subprocess.run([sys.executable, "-B", "-X", "utf8", *args], cwd=root).returncode
+    try:
+        code = subprocess.run([sys.executable, "-B", "-X", "utf8", *args], cwd=root, timeout=180).returncode
+    except subprocess.TimeoutExpired:
+        code = "TIMEOUT (180 seconds)"
     if code:
         failed.append({"command": args, "exit_code": code})
 if failed:

@@ -46,6 +46,7 @@ class TransportError(RuntimeError):
 
 RAW_BODY_LIMIT = 65536            # characters of a malformed body kept in the raw record
 READ_PIECE = 65536                # bytes asked of each read1() call while reading a body (r7.3, FT1-D1)
+MAX_RESPONSE_BYTES = 16 * 1024 * 1024  # hard cap before JSON parsing; also applies to HTTP error bodies
 
 
 TRANSIENT_HTTP = {408, 409, 429, 500, 502, 503, 504, 529}
@@ -155,9 +156,15 @@ class HttpTransport:
             r = OPENER.open(req, timeout=timeout_s)          # r7.1: no proxy, no redirect (see OPENER); returns after the status line
         except urllib.error.HTTPError as e:
             try:
-                detail = redact(e.read().decode(errors="replace"), secrets)[:300]
+                raw_error = e.read(MAX_RESPONSE_BYTES + 1)
+                if len(raw_error) > MAX_RESPONSE_BYTES:
+                    raise TransportError(f"HTTP {e.code}: response size limit exceeded; body discarded",
+                                         status=e.code, reason="response_size_limit") from None
+                detail = redact(raw_error.decode(errors="replace"), secrets)[:300]
             except (OSError, http.client.HTTPException):
                 detail = "(the error body could not be read)"
+            finally:
+                e.close()
             raise TransportError(f"HTTP {e.code}: {detail}", status=e.code, transient=e.code in TRANSIENT_HTTP) from None
         except urllib.error.URLError as e:
             # urllib raises URLError only while connecting or sending: the request was not completely sent
@@ -172,22 +179,35 @@ class HttpTransport:
         with r:
             status = r.status
             pieces = []
+            received = 0
             try:
                 read1 = getattr(r, "read1", None)
                 if read1 is None:                     # a response object without read1 (a test double): one read, as in r7.2
-                    pieces.append(r.read())
+                    pieces.append(r.read(MAX_RESPONSE_BYTES + 1))
+                    received = len(pieces[0])
                 else:
                     # r7.3 (FT1-D1): read1 returns what one system call delivered, so the bytes that arrived before a timeout or a
                     # reset are already kept; r.read() lost them with the exception
                     while True:
-                        piece = read1(READ_PIECE)
+                        piece = read1(min(READ_PIECE, MAX_RESPONSE_BYTES + 1 - received))
                         if not piece:
                             break
                         pieces.append(piece)
+                        received += len(piece)
+                        if received > MAX_RESPONSE_BYTES:
+                            break
+                    if received > MAX_RESPONSE_BYTES:
+                        raise TransportError("response size limit exceeded; body discarded", status=status,
+                                             malformed=True, reason="response_size_limit")
                     left = getattr(r, "length", None)
                     if isinstance(left, int) and left > 0:       # closed before Content-Length was met: the r7.2 IncompleteRead
                         raise http.client.IncompleteRead(b"".join(pieces), left)
+                if received > MAX_RESPONSE_BYTES:
+                    raise TransportError("response size limit exceeded; body discarded", status=status,
+                                         malformed=True, reason="response_size_limit")
                 data = json.loads(b"".join(pieces))
+            except TransportError:
+                raise
             except Exception as e:  # noqa: BLE001 -- anything after the status line is a malformed answer, never a retry
                 raw = b"".join(pieces)
                 if isinstance(e, http.client.IncompleteRead) and len(e.partial or b"") > len(raw):

@@ -151,7 +151,7 @@ A Wilson interval is why *"0 errors"* is reported with a bound rather than as ce
 ## 6 · Reproducing every number
 
 ```bash
-pip install -r requirements.txt          # Pillow==10.4.0 (pinned); matplotlib for charts only
+pip install -r requirements.txt          # current patched Pillow; matplotlib for charts only
 python3 generate_dataset.py --n 40 --seed 7 --out ./data
 python3 run_eval.py --model <model> --data ./data --out ./results
 python3 make_charts.py                   # optional

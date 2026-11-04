@@ -28,10 +28,12 @@ gives p < 0.05, authored > copyist, and the two Wilson 95% intervals do not over
 error document if it has at least one status error. Documents whose month is misread or with more than half the cells
 MISSING are parse failures and are excluded from the decision and listed (PROBE.md, unchanged).
 """
-import os, sys, io, json, re, math, base64, argparse, datetime
+import os, sys, io, json, re, math, base64, argparse, datetime, warnings
+from pathlib import Path
 from collections import Counter, defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(HERE))  # shared validation is available to standalone selftests and kit commands
 sys.path.insert(0, HERE)
 import probe_decide as PD  # noqa: E402
 
@@ -53,6 +55,25 @@ wilson, fisher_2x2 = PD.wilson, PD.fisher_2x2          # one implementation, sha
 ARMS = {}             # arm_id -> validated local arm, filled by load_local_arms()
 TRUSTED = ()
 CALLS = Counter()
+MAX_PHOTO_BYTES = 32 * 1024 * 1024
+MAX_PHOTO_PIXELS = 40_000_000
+
+
+def photo_name(name):
+    """A private map names one JPEG/PNG within --photos, never an arbitrary path."""
+    if (not isinstance(name, str) or len(name) > 255 or name in ("", ".", "..")
+            or any(c in name for c in '/\\:*?"<>|') or any(ord(c) < 32 for c in name)
+            or Path(name).suffix.lower() not in (".jpg", ".jpeg", ".png")):
+        raise ValueError("photo must be a single JPEG or PNG filename within --photos")
+    return name
+
+
+def photo_path(directory, name):
+    base = Path(directory).resolve()
+    path = (base / photo_name(name)).resolve()
+    if not path.is_relative_to(base):
+        raise ValueError("photo resolves outside --photos; linked external files are refused")
+    return str(path)
 
 
 def load_local_arms(path, mmeval_root):
@@ -81,8 +102,14 @@ def load_local_arms(path, mmeval_root):
 def load_image_b64(path, max_side=2000):
     """Phone photos are 3-4k px; downscale to <=max_side and send as JPEG. Returns (b64, media_type)."""
     from PIL import Image, ImageOps
-    im = Image.open(path)
-    im = ImageOps.exif_transpose(im).convert("RGB")     # honour phone rotation metadata
+    if os.path.getsize(path) > MAX_PHOTO_BYTES:
+        raise ValueError("photo file size exceeds 32 MiB limit")
+    with warnings.catch_warnings():
+        warnings.simplefilter("error", Image.DecompressionBombWarning)
+        with Image.open(path, formats=("JPEG", "PNG")) as original:
+            if original.width * original.height > MAX_PHOTO_PIXELS:
+                raise ValueError("photo pixel count exceeds 40 million limit")
+            im = ImageOps.exif_transpose(original).convert("RGB")  # honour phone rotation metadata
     if im.width > im.height:
         print(f"WARNING: {os.path.basename(path)} is LANDSCAPE after EXIF correction; the forms are portrait. The image is being sent sideways — rotate it and re-run.")
     if max(im.size) > max_side:
@@ -283,6 +310,11 @@ def main():
     if not models:
         sys.exit("No arms: pass --arm-config with validated local arms. Nothing was sent.")
     man = json.load(open(os.path.join(a.kit, "MANIFEST.json")))
+    from mmeval.config import safe_identifier
+    if not all(safe_identifier(d.get("doc_id")) for d in man["documents"]) or not all(safe_identifier(m) for m in models):
+        raise ValueError("document and arm IDs must be portable filename identifiers")
+    if len({d["doc_id"] for d in man["documents"]}) != len(man["documents"]):
+        raise ValueError("duplicate document ID in probe manifest")
     per_arm = Counter(d["condition"] for d in man["documents"])
     stage = 2 if min(per_arm.get("copy", 0), per_arm.get("auth", 0)) >= 7 else 1
     os.makedirs(os.path.join(a.out, "raw"), exist_ok=True)
@@ -290,8 +322,8 @@ def main():
     results = []
     for doc in man["documents"]:
         did = doc["doc_id"]
-        photo = next((os.path.join(a.photos, did + ext) for ext in (".jpg", ".jpeg", ".png", ".JPG", ".PNG")
-                      if os.path.exists(os.path.join(a.photos, did + ext))), None)
+        photo = next((photo_path(a.photos, did + ext) for ext in (".jpg", ".jpeg", ".png", ".JPG", ".PNG")
+                      if os.path.exists(photo_path(a.photos, did + ext))), None)
         gold_path = os.path.join(a.kit, f"spec_{did}.gold.json" if doc["condition"] == "copy" else f"intent_{did}.gold.json")
         if not photo or not os.path.exists(gold_path):
             print(f"SKIP {did}: {'no photo' if not photo else 'no gold (run intent_to_gold.py first)'}"); continue

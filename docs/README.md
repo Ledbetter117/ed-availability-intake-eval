@@ -1,6 +1,6 @@
 # docs/ — methods, corrections, limitations, pre-registration
 
-Six documents. They exist so that a reader can answer five questions about this repository without asking anyone.
+This folder links the methods, corrections, study plans, and software validation record.
 
 | # | The question | Answered in |
 |---|---|---|
@@ -8,9 +8,9 @@ Six documents. They exist so that a reader can answer five questions about this 
 | 2 | What did it measure? | [`METHODS.md`](METHODS.md) §4–5 · `../analysis-v2.md` |
 | 3 | **Where were you wrong?** | [`CORRECTIONS.md`](CORRECTIONS.md) — and the preserved `v1.0.0` tag |
 | 4 | How do you know the instrument was good enough to trust? | [`LIMITATIONS.md`](LIMITATIONS.md) · [`PROBE.md`](PROBE.md) |
-| 5 | **What would have changed your mind?** | [`PROBE.md`](PROBE.md) §3–4 and [`PROBE-B.md`](PROBE-B.md) §6 — two pre-registered decision rules, published before the data — and [`PROBE-AMENDMENT-01.md`](PROBE-AMENDMENT-01.md), which corrects their unit of inference, also before any data |
+| 5 | **What would have changed your mind?** | [`PROBE.md`](PROBE.md), [`PROBE-B.md`](PROBE-B.md), and adopted [`PROBE-AMENDMENT-01.md`](PROBE-AMENDMENT-01.md) preserve the planned photo study. Amendment 02 remains a draft; no completed photo endpoint is reported. |
 
-Rows 3 and 5 are the ones most evaluation repositories cannot answer. They are the reason this folder exists.
+The correction record and planned decision rules let readers inspect both the changes and the remaining work.
 
 ---
 
@@ -18,9 +18,9 @@ Rows 3 and 5 are the ones most evaluation repositories cannot answer. They are t
 
 **If you have two minutes** — [`CORRECTIONS.md`](CORRECTIONS.md). It is the shortest route to knowing whether the rest is trustworthy, because it is where the project is wrong.
 
-**If you are deciding whether to reuse this** — [`LIMITATIONS.md`](LIMITATIONS.md) first. It says what the benchmark cannot tell you, including that it is **saturated** and cannot rank frontier models.
+**If you are deciding whether to reuse this** — [`LIMITATIONS.md`](LIMITATIONS.md) first. The stored runs do not rank current frontier models or establish real-photograph performance.
 
-**If you are reproducing it** — [`METHODS.md`](METHODS.md). Every number is re-derivable from `per_case.csv`, `typed_errors.json` and `calendar_level.csv`; the raw model text is regenerable by re-running the harness and is **not** shipped.
+**If you are reproducing it** — [`METHODS.md`](METHODS.md) and [`NUMERICAL-SOURCE-MAP.json`](NUMERICAL-SOURCE-MAP.json). Aggregate counts can be recomputed from the public records. Historical raw model text is **not** shipped; a new remote run would produce new observations and is not guaranteed to reproduce it.
 
 **If you want to know whether the author changes his mind when the data says so** — [`PROBE.md`](PROBE.md) and [`PROBE-B.md`](PROBE-B.md), then check the commit dates.
 
@@ -28,11 +28,11 @@ Rows 3 and 5 are the ones most evaluation repositories cannot answer. They are t
 
 ## The short version
 
-A frontier model reads cleanly-rendered nurse availability calendars **essentially perfectly** — 0 status errors in 1,240 cells. A smaller model does not — 26 errors, 6 of them the asymmetric-cost kind.
+The saved synthetic runs contain 0 and 26 status errors in 1,240 cells per recorded model label. The second run includes 6 UNAVAILABLE-to-available flips; the first still contains a duplicated note.
 
 One of this project's own headline metrics, a **"hallucination rate,"** was named for a failure it never tested. Every counted instance was text present on the page, attached to the wrong day. **Measured fabrication: 0 of 147 predicted note instances for Sonnet and 0 of 145 for Haiku** (Wilson 95% upper bound **2.5%** and **2.6%**; 0 of 292 pooled across both models, upper bound 1.30% — the pooled figure merges two different systems and is quoted only where that is stated). The metric is retired and the correction is public, with `v1.0.0` preserved so the two can be read side by side.
 
-Because the benchmark is saturated, it cannot answer the harder question — whether a **real hand under real authoring conditions** breaks extraction where a rendered font does not. [`PROBE.md`](PROBE.md) pre-registers that test, with the disqualifying result and the reachability arithmetic written down first. [`PROBE-AMENDMENT-01.md`](PROBE-AMENDMENT-01.md) recomputes that arithmetic at the document level, before any data: the probe can return PROCEED or CONTINUE, and it cannot return CLOSE.
+The synthetic results do not answer whether real authoring conditions change extraction. [`PROBE.md`](PROBE.md) records that planned test. [`PROBE-AMENDMENT-01.md`](PROBE-AMENDMENT-01.md) changes the unit to the document and retires CLOSE. Photo results remain unfinished; see [`RELEASE-STATUS.md`](RELEASE-STATUS.md).
 
 ---
 

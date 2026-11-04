@@ -1,0 +1,11 @@
+{
+  "exceptions": [
+    {
+      "path": "tests/test_r74.py",
+      "rule": "credential_in_url",
+      "sha256": "90fcbc6b8f5e1081a7a76910924c041a48e16af586c27fcef03588b52dc0a0cb",
+      "reason": "Synthetic loopback user:secret fixture tests rejection of URL credentials; no usable secret or remote destination.",
+      "expires": "2027-02-01"
+    }
+  ]
+}

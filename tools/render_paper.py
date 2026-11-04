@@ -1,6 +1,7 @@
 """Render a Markdown technical report to a readable, reproducible PDF.
 
 Optional publication dependency: reportlab. Core evaluation code needs no renderer.
+Install alongside the patched image dependencies: pip install -r requirements.txt reportlab
 Usage: python render_paper.py source.md output.pdf
 """
 from pathlib import Path

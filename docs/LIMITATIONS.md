@@ -89,6 +89,6 @@ A single prompt formulation, one run per model, model-default temperature. **Pro
 
 ## In one sentence
 
-**This repository shows that frontier vision-language models read cleanly-rendered availability calendars essentially perfectly, that a smaller model does not, that one of its own headline metrics was named for a failure it never measured — and it does not show that any of this holds for a real handwritten sheet.**
+**The saved synthetic runs contain zero and 26 status errors under their recorded model labels; the first run still has a duplicated note. One headline metric was named for a failure it did not measure. These records do not establish current model rankings or performance on a real handwritten sheet.**
 
 See also: [`CORRECTIONS.md`](CORRECTIONS.md) · [`METHODS.md`](METHODS.md) · [`PROBE.md`](PROBE.md)

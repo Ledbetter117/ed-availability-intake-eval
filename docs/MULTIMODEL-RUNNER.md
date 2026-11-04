@@ -86,7 +86,7 @@ Dry-run is the default. `mm_run.py plan` writes a packet with one scrubbed examp
 - every selected credential variable is set, including an optional local credential;
 - `MMEVAL_DISPATCH_ACK` holds the first 12 characters of this run's manifest hash.
 
-Credentials are read only from the environment at send time and are never written anywhere. A passing mock or replay is not a provider run.
+Credentials are read from the selected environment variable at send time. Exact credential echoes are removed from retained errors; a successful response that reflects a credential is excluded from scoring. This is not a guarantee against an encoded or transformed secret. Keep raw evidence private; see [SECURITY.md](../SECURITY.md). A passing mock or replay is not a provider run.
 
 ## Verified offline (2026-10-26)
 

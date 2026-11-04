@@ -1,5 +1,7 @@
 # The probe, Arm A — manufactured documents · pre-registration
 
+> Current status (2026-11-03): the historical protocol below is preserved. Adopted [Amendment 01](PROBE-AMENDMENT-01.md) supersedes its cell-level and CLOSE rules; [Amendment 02](PROBE-AMENDMENT-02.draft.md) remains a draft. No completed photo-probe endpoint is reported. References below to publication before data concern the planned probe scoring, not the earlier synthetic runs or the creation of existing real documents.
+
 > [!note] Added 2026-09-06 — this is now **Arm A** of a two-arm probe.
 > After this file was written, the author located his own real availability documents from May 2023 → Nov 2025. Those form **Arm B**, pre-registered separately in [`PROBE-B.md`](PROBE-B.md) *before* any of them was scored. Nothing below is changed; Arm A still runs exactly as written, because it isolates the authoring condition within one writer — which Arm B, being across-corpora, cannot. The two arms triangulate. See `PROBE-B.md` §1 for the comparison.
 

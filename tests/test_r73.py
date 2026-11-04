@@ -301,7 +301,7 @@ class FakeResp:
     def __init__(self, status, read):
         self.status, self._read = status, read
 
-    def read(self):
+    def read(self, size=-1):
         return self._read()
 
     def __enter__(self):

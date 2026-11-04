@@ -24,6 +24,7 @@ The API key is read from the environment ONLY. It is never printed or logged.
 100% synthetic data — no PHI.
 """
 import os, sys, json, csv, glob, base64, argparse, re, time, urllib.request, urllib.error
+from mmeval import transport as transport
 
 LEGAL = {"AVAILABLE", "AM", "PM", "NIGHT", "UNAVAILABLE"}
 AVAILABLE_KINDS = {"AVAILABLE", "AM", "PM", "NIGHT"}
@@ -78,23 +79,6 @@ def openai_token_limit(model, n):
     return {"max_tokens": n}
 
 
-def _secrets(headers):
-    """Credential values present in request headers, so they can be removed from error text."""
-    found = []
-    for k, v in (headers or {}).items():
-        if str(k).lower() in ("authorization", "x-api-key") and isinstance(v, str) and v:
-            found.append(v)
-            if v.lower().startswith("bearer "):
-                found.append(v[7:])
-    return sorted({s for s in found if len(s) >= 8}, key=len, reverse=True)
-
-
-def _redact(text, secrets):
-    for s in secrets:
-        text = text.replace(s, "[REDACTED]")
-    return text
-
-
 def get_key(provider):
     var = "ANTHROPIC_API_KEY" if provider == "anthropic" else "OPENAI_API_KEY"
     key = os.environ.get(var)
@@ -106,24 +90,24 @@ def get_key(provider):
 
 
 def _post(url, headers, payload, tries=3):
-    body = json.dumps(payload).encode()
-    secrets = _secrets(headers)   # an error body can echo the supplied key (QA: http_error_message_redacts...)
+    """Use the same bounded, credential-scrubbing transport as the multi-model runner.
+
+    Only explicit provider endpoints are accepted. An ambiguous send or malformed
+    success is terminal: an unrecorded retry could duplicate a paid request.
+    """
+    providers = {"https://api.anthropic.com/v1/messages": "anthropic",
+                 "https://api.openai.com/v1/chat/completions": "openai"}
+    if url not in providers:
+        raise RuntimeError("legacy provider destination is not allowed; nothing was sent")
+    arm = {"arm_id": "legacy", "provider": providers[url], "route": "cloud"}
     for attempt in range(tries):
         try:
-            req = urllib.request.Request(url, data=body, headers=headers, method="POST")
-            with urllib.request.urlopen(req, timeout=180) as r:
-                return json.load(r)
-        except urllib.error.HTTPError as e:
-            detail = _redact(e.read().decode(errors="replace"), secrets)[:300]   # redact before truncating
-            if e.code in (429, 500, 502, 503, 529) and attempt < tries - 1:
+            return transport.HttpTransport().send(arm, url, headers, payload, 180)["json"]
+        except transport.TransportError as e:
+            if e.transient and not e.ambiguous and attempt < tries - 1:
                 time.sleep(5 * (attempt + 1))
                 continue
-            raise RuntimeError(f"API HTTP {e.code}: {detail}") from None
-        except OSError as e:
-            if attempt < tries - 1:
-                time.sleep(5)
-                continue
-            raise RuntimeError(f"network error: {_redact(str(e), secrets)}") from None
+            raise RuntimeError(str(e)) from None
 
 
 def call_vision(model, key, png_path, prompt):

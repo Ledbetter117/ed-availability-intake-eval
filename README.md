@@ -101,7 +101,7 @@ Per case, then aggregated per slice and overall:
 6. **Robustness delta** — accuracy on `clean` minus each degraded slice.
 
 ## How to run
-Python 3.10+ with **Pillow** (`pip install -r requirements.txt`); matplotlib only for charts. Extraction never sees gold labels. Scoring never calls the API unless the optional `--judge` flag is set; no published result uses it, and when it is set the judge sees the gold note. The key is read from an environment variable only — never a file, never an argument, never logged.
+Python 3.11+ with **Pillow** (`pip install -r requirements.txt`); matplotlib only for charts. Current dependencies include security fixes and differ from the historical rendering environment. Use the committed images for the historical benchmark; a new render is not claimed to be pixel-identical. Extraction never sees gold labels. Scoring never calls the API unless the optional `--judge` flag is set; no published result uses it, and when it is set the judge sees the gold note. Credentials are supplied through environment variables. The transports redact exact credential echoes and reject reflected successful responses before scoring. See [SECURITY.md](SECURITY.md) for the input and privacy boundaries.
 
 ```bash
 python3 generate_dataset.py --n 40 --seed 7     # rebuild the dataset (or use data/ as shipped)

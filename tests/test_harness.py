@@ -321,8 +321,8 @@ check("D1 o-series uses max_completion_tokens; gpt-4o keeps max_tokens",
       "max_completion_tokens" in captured[0] and "max_tokens" not in captured[0] and "max_tokens" in captured[1])
 secret = "TEST_SENTINEL_NOT_A_REAL_KEY_123"
 err = urllib.error.HTTPError("https://example.invalid", 401, "x", {}, io.BytesIO(("bad key " + secret).encode()))
-with patch.object(e.urllib.request, "urlopen", side_effect=err):
-    out = attempt(lambda: e._post("https://example.invalid", {"Authorization": "Bearer " + secret}, {}))
+with patch.object(e.transport.OPENER, "open", side_effect=err):
+    out = attempt(lambda: e._post("https://api.openai.com/v1/chat/completions", {"Authorization": "Bearer " + secret}, {}))
 check("D2 the supplied key is redacted from HTTP error text", secret not in str(out) and "[REDACTED]" in str(out), str(out)[:80])
 # ---- D4 · a truncated answer is a harness outcome, not an invalid answer (review P06-ED F09)
 with patch.object(e, "_post", side_effect=lambda u, h, p: {"choices": [{"message": {"content": '{"month": "2026-07"'},

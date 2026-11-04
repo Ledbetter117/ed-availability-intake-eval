@@ -1,5 +1,7 @@
 # The probe, Arm B — real documents · pre-registration
 
+> Current status (2026-11-03): the historical protocol below is preserved. Adopted [Amendment 01](PROBE-AMENDMENT-01.md) supersedes its cell-level and CLOSE rules; [Amendment 02](PROBE-AMENDMENT-02.draft.md) remains a draft. No completed photo-probe endpoint is reported. Real documents existed before this protocol; prospective registration concerns their planned scoring.
+
 **Written 2026-09-06, before any image in this arm has been scored. Committed alongside [`PROBE.md`](PROBE.md), which is now Arm A.** If you are reading this after results exist, check the repository history: this file precedes `PROBE-RESULTS.md`.
 
 ---

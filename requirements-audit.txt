@@ -1,0 +1,2 @@
+# Offline evaluation dependencies are kept separate from this CI advisory client.
+pip-audit==2.10.1

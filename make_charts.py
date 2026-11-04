@@ -101,11 +101,13 @@ def main():
         ks = sorted(rob)
         vals = [100 * rob[k] for k in ks]
         bars = ax.bar(ks, vals, color=[DARK["ok"] if v <= 2 else DARK["warn"] if v <= 10 else DARK["crit"] for v in vals])
+        span = max(max(vals) - min(vals), max(abs(v) for v in vals), 1)
+        ax.set_ylim(min(0, min(vals)) - span * .05, max(0, max(vals)) + span * .2)
         for b, v in zip(bars, vals):
-            ax.text(b.get_x() + b.get_width() / 2, v + 0.3, f"{v:+.1f} pp", ha="center",
+            ax.text(b.get_x() + b.get_width() / 2, v + span * .03, f"{v:+.1f} pp", ha="center",
                     color=DARK["fg"], fontsize=10)
         ax.set_ylabel("accuracy drop vs clean (pp)", color=DARK["fg"])
-        style(ax, "Robustness: accuracy penalty of degraded inputs")
+        style(ax, "Observed accuracy difference from clean slice")
         save(fig, os.path.join(out, "robustness_delta.png"))
 
 

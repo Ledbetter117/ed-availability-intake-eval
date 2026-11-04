@@ -307,7 +307,7 @@ if want("D1"):
 # =============================================================== R15 + D1(d): the full mm_run.py replay CLI path
 def tree_copy(name):
     dst = os.path.join(TMP, name)
-    shutil.copytree(TREE, dst, ignore=shutil.ignore_patterns("results*", "mm_runs", "__pycache__", ".git", "tests"))
+    shutil.copytree(TREE, dst, ignore=shutil.ignore_patterns("results*", "mm_runs", "__pycache__", ".git", ".qa-review", "venv", ".venv", "tests"))
     return dst
 
 
@@ -870,7 +870,7 @@ class FakeResp:
     def __init__(self, status, read):
         self.status, self._read = status, read
 
-    def read(self):
+    def read(self, size=-1):
         return self._read()
 
     def __enter__(self):

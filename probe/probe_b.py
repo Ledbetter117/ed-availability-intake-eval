@@ -19,7 +19,8 @@ Changes from the 2026-09-12 file (ed-eval-probe/probe_b.py, sha256 d399daa5…, 
   python3 probe_b.py --mock --error-docs 2          # end-to-end with a fake model
   python3 probe_b.py --photos <dir> --arm-config <local arms> --baseline <arm>=<per_case.csv | mm run dir> --amendment-02-frozen
 
-CONFIDENTIALITY: --photos points at a private folder. Nothing in that folder is copied anywhere. Only numbers are written.
+CONFIDENTIALITY: --photos points at a private folder. Photos are sent only to the configured local vision endpoint.
+Raw model transcriptions are saved under --out/raw and can contain private document text. Keep all probe outputs private.
 """
 import argparse, json, os, sys, calendar, csv
 from collections import Counter
@@ -47,11 +48,19 @@ def load_private():
 
 
 def enrich(docs, priv):
+    from mmeval.config import safe_identifier
     out = []
     for d in docs:
+        if not safe_identifier(d.get("doc_id")):
+            raise ValueError("document ID must be a portable filename identifier")
         m = priv.get(d["doc_id"])
         if not m:
             sys.exit(f"REFUSED: {d['doc_id']} missing from {PRIVATE_MAP}")
+        if set(m) & {"doc_id", "kind"}:
+            raise ValueError("private map may not override the document ID or kind")
+        A.photo_name(m.get("photo"))
+        if m.get("pair"):
+            A.photo_name(m["pair"])
         out.append({**d, **m})
     return out
 
@@ -225,7 +234,7 @@ def mock_extract(gold, n_errors, kind):
 
 def preflight(photos, man):
     want = sorted({d["photo"] for d in man["documents"]} | {d["pair"] for d in man["documents"] if d["pair"]})
-    missing = [f for f in want if not os.path.isfile(os.path.join(photos, f))]
+    missing = [f for f in want if not os.path.isfile(A.photo_path(photos, f))]
     if missing:
         sys.exit("PRE-FLIGHT REFUSED — expected files not found in --photos:\n  " + "\n  ".join(missing) +
                  "\nNothing was sent. Point --photos at the folder holding exactly these documents.")
@@ -276,7 +285,7 @@ def run(a):
                     if a.parse_fail_doc == doc["doc_id"] and cond == "blind":
                         pred = None
                 else:
-                    img = os.path.join(a.photos, doc["photo"])
+                    img = A.photo_path(a.photos, doc["photo"])
                     pred = extract(model, img, doc, cond)
                 if doc["kind"] == "grid":
                     r = score_grid(pred if pred is not None else {}, gold)
@@ -300,7 +309,7 @@ def run(a):
             p1 = mock_extract(gold, 0, "grid"); p2 = mock_extract(gold, a.pair_errors, "grid")
         else:
             m0 = models[0]
-            i1, i2 = os.path.join(a.photos, pr["primary"]), os.path.join(a.photos, pr["partner"])
+            i1, i2 = A.photo_path(a.photos, pr["primary"]), A.photo_path(a.photos, pr["partner"])
             p1 = extract(m0, i1, doc, "pair-primary")
             p2 = extract(m0, i2, doc, "pair-partner")
         out["pairs"][pr["doc_id"]] = pair_diff(p1, p2)

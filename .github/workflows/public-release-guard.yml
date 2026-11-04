@@ -1,0 +1,36 @@
+name: Public release guard
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 12 * * 1'
+permissions:
+  contents: read
+jobs:
+  release-guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.12'
+      - name: Install version-pinned guard parsers
+        run: python -m pip install -r requirements-guard.txt
+      - name: Prove deliberately unsafe fixtures fail
+        run: python -B -m unittest discover -s tools -p test_public_release_guard.py
+      - name: Inspect exact commit and substantive-review binding
+        run: python -B tools/public_release_guard.py
+      - name: Verify and run full-history secret scanner
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 2 --output "$RUNNER_TEMP/gitleaks.tar.gz" https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
+          echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  $RUNNER_TEMP/gitleaks.tar.gz" | sha256sum --check --strict
+          tar -xzf "$RUNNER_TEMP/gitleaks.tar.gz" -C "$RUNNER_TEMP" gitleaks
+          printf '[extend]\nuseDefault = true\n' > "$RUNNER_TEMP/gitleaks-default.toml"
+          "$RUNNER_TEMP/gitleaks" git . --log-opts=--all --config="$RUNNER_TEMP/gitleaks-default.toml" --gitleaks-ignore-path="$RUNNER_TEMP/no-ignore-file" --ignore-gitleaks-allow --redact=100 --max-archive-depth=3 --timeout=120 --no-banner
