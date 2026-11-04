@@ -10,7 +10,7 @@
   "limitations": [
     "No guarantee of security or protection from criticism.",
     "Original empirical study endpoints remain unfinished; simulated and human evidence are distinct.",
-    "Full historical Git objects scanned with Gitleaks 8.30.1; zero detected secrets does not prove no sensitive information.",
+    "History scanning requires diagnostic-error checks, complete fetched refs and narrow expiring synthetic-value exceptions. Scanner results do not prove the absence of sensitive information.",
     "Old tags remain historical and may contain defects repaired in current source.",
     "Platform settings and external surfaces have separate dated private evidence; this JSON is not a platform-attestation signature.",
     "Seven original suite checks remain UNVERIFIED as detailed in docs/SECURITY-REVIEW.md; no new model inference."
@@ -23,11 +23,11 @@
     ".gitattributes": "c633de68d0f52f1842d2c3ffaf7d88ea606b7f311ee67c3d6c0093f7715ccfcd",
     ".github/dependabot.yml": "efe35b04741cc513b7fecc935d603508aff876b23c82979b0a3300f299c3ea37",
     ".github/workflows/checks.yml": "fbe15a480bdf2ae12838b94136cbf4b607dada160e3c43397f976d1eaddba2b1",
-    ".github/workflows/public-release-guard.yml": "b0a6c21ac59b64b109d594dd55080f9a63e0480f98e6394e6a8c62c937339399",
+    ".github/workflows/public-release-guard.yml": "94bb6025416539fa9ae2fc377382fdd05a63ffe2cb4305bdeb1476f6114d76da",
     ".gitignore": "0243794e61b8a731486e2993618d9a6992ac16fc5f0ec9c98ab735ca3098eb7f",
     ".public-release-exceptions.json": "400c3633e25684244954533537ec1231cd9510cf99c524409fc10ce63eb715dd",
     "LICENSE": "f04978fc48f82b25835d3e7b0df7d16319cb4143fccf47c12ef2b1343b4c720b",
-    "PUBLIC-RELEASE-POLICY.md": "591d39a9e96f7c871256d416e748d0021efb720ca2c72be5ba94c51840e40c33",
+    "PUBLIC-RELEASE-POLICY.md": "0db1944376b50dd993c6a72584123ac09bf120f638b71b7315a10485d6847bfe",
     "README.md": "29bcf04f19f47c2f83361f15b4a70dddd62468d40bcde082339b9750c577dc57",
     "RELEASE-NOTES.md": "d72d8f245c53367375a8b3719872b63abdf3c0a3a02d9f40fc604d32a37a0c33",
     "SECURITY.md": "679df3759d99d92b47f581c6ed0a890901a6a9431cd98d845e680ebb85059753",
@@ -191,10 +191,13 @@
     "tests/test_r74.py": "90fcbc6b8f5e1081a7a76910924c041a48e16af586c27fcef03588b52dc0a0cb",
     "tests/test_resume_reporting.py": "e9378ce143a3cd38f009bdad03ec4aa394f6dde89bb8e83fc8dd04dcaca61aa9",
     "tests/test_unlock_race.py": "40ae49991aae1903b12f3865ebc908d600e46240ff7c6844da8a9d081700c80e",
+    "tools/gitleaks.toml": "54b16d9ff88a47647e9bea1f9ea3c2e4a78f76289c83600fab1babd0eb8337ef",
     "tools/public_release_guard.py": "7a206d1f81f677681f4cc8b408a57997578ef8f601370f25b29637f99076f7cc",
     "tools/render_paper.py": "9790f6ca1eac4cad6153ea047ed5420a1f0c08d9c1e423661adae9774d903fad",
     "tools/run_checks.py": "f6f879d1be572f7d8ca56c1a6759fbad2f86c7d6c3e4d4e6251e16624654f262",
+    "tools/scan_secret_history.py": "7a023cf28e0ded97c8b83775fb773f995a21c77fa31b2609eb4940eb9fe4bd79",
     "tools/test_public_release_guard.py": "ebf42c98fbbad11a9769849a35bb489bc540bf9ddb388806909d1513172755d2",
+    "tools/test_scan_secret_history.py": "145f76faa92e5b450380d8698d45fa7def6f67decda5949d8b481cfa0e671ea5",
     "typed_errors.json": "be1f2f09fc31c201fce63e793b2e71e832a3152e954041e992c8a85aa356c278"
   }
 }

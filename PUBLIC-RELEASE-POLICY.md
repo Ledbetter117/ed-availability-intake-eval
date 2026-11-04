@@ -30,7 +30,10 @@ python -B tools/public_release_guard.py --index
 ```
 
 The CI workflow runs the committed version and a checksum-pinned Gitleaks scan
-of fetched history. Dependency alerts and private vulnerability reporting are
+of fetched history. The wrapper rejects scanner diagnostic errors even when
+the scanner returns exit zero. Reachable commits and scanned patch counts are
+reported separately; a zero exit alone is not coverage evidence.
+Dependency alerts and private vulnerability reporting are
 separate repository settings, not implied by a passing workflow. Review and
 refresh parser/scanner pins and dependency advisories when updates are proposed.
 
@@ -40,9 +43,13 @@ Do not regenerate a review receipt merely to silence a failed check. Changed
 bytes require the affected substantive checks and a new accountable review.
 
 The integrity manifest is checked separately to avoid a circular hash with the
-review receipt. Its presence is itself bound by the receipt. Exceptions must
+review receipt. Its presence is itself bound by the receipt. Content exceptions must
 name an exact path, rule, SHA-256, reason and expiry; broad exclusions are not
-permitted. Sensitive evidence belongs outside public Git.
+permitted. History-scanner exceptions instead bind an exact synthetic value and
+exact path together, with a review expiry, because historical file contents can
+differ. The scanner configuration is itself bound by the review receipt. An
+unrelated secret in that same file must remain detectable. Sensitive evidence
+belongs outside public Git.
 
 ## Boundaries and response
 

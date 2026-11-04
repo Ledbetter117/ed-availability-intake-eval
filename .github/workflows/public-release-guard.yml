@@ -23,6 +23,8 @@ jobs:
         run: python -m pip install -r requirements-guard.txt
       - name: Prove deliberately unsafe fixtures fail
         run: python -B -m unittest discover -s tools -p test_public_release_guard.py
+      - name: Prove scanner diagnostic errors cannot pass
+        run: python -B -m unittest discover -s tools -p test_scan_secret_history.py
       - name: Inspect exact commit and substantive-review binding
         run: python -B tools/public_release_guard.py
       - name: Verify and run full-history secret scanner
@@ -32,5 +34,4 @@ jobs:
           curl --fail --location --retry 2 --output "$RUNNER_TEMP/gitleaks.tar.gz" https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
           echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  $RUNNER_TEMP/gitleaks.tar.gz" | sha256sum --check --strict
           tar -xzf "$RUNNER_TEMP/gitleaks.tar.gz" -C "$RUNNER_TEMP" gitleaks
-          printf '[extend]\nuseDefault = true\n' > "$RUNNER_TEMP/gitleaks-default.toml"
-          "$RUNNER_TEMP/gitleaks" git . --log-opts=--all --config="$RUNNER_TEMP/gitleaks-default.toml" --gitleaks-ignore-path="$RUNNER_TEMP/no-ignore-file" --ignore-gitleaks-allow --redact=100 --max-archive-depth=3 --timeout=120 --no-banner
+          python -B tools/scan_secret_history.py . --gitleaks "$RUNNER_TEMP/gitleaks" --config tools/gitleaks.toml --out "$RUNNER_TEMP/secret-history.json" --expected-head "$(git rev-parse HEAD)"

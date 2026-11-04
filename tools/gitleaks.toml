@@ -1,0 +1,26 @@
+title = "Default Gitleaks rules with two reviewed exact EDi false-positive exceptions"
+
+[release_review]
+reviewed_on = "2026-11-03"
+expires_on = "2027-02-01"
+scope = "Exact extracted value AND exact historical file path; no whole-file or commit exemption"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "generic-api-key"
+
+[[rules.allowlists]]
+description = "Exact reviewed SHA-256 of configs/arms.local-auth.example.json in the release review receipt"
+condition = "AND"
+regexTarget = "secret"
+paths = ['''^\.public-release-review\.json$''']
+regexes = ['''^418d8ea3c6dd5c16ac3802571d143749f802a5b94a4a978973a6aaf207aa9d10$''']
+
+[[rules.allowlists]]
+description = "Exact synthetic credential used by the historical r72 redaction regression"
+condition = "AND"
+regexTarget = "secret"
+paths = ['''^tests/test_r72\.py$''']
+regexes = ['''^sk-test-SECRET-0123456789$''']
