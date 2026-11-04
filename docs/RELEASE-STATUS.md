@@ -1,6 +1,6 @@
 # Software release and study status
 
-This is the 2026-11-03 software and technical-report candidate. It preserves the historical synthetic evaluation and completes bounded engineering repairs. It is not a declaration that both photograph probes or the full original study are complete.
+The software, technical report and subsequent security corrections are public. See the [release history](https://github.com/Ledbetter117/ed-availability-intake-eval/releases) for the exact source revision of each edition and the [security review](SECURITY-REVIEW.md) for repair evidence. The historical synthetic evaluation is preserved. The two photograph probes and the full original study remain unfinished.
 
 | Work | State and evidence |
 |---|---|
@@ -12,7 +12,7 @@ This is the 2026-11-03 software and technical-report candidate. It preserves the
 | Arm A and Arm B tooling | Integrated and checked with synthetic cases. Original study goals are preserved. No real-photo result is present. |
 | Amendment 01 | Adopted document-level rules and local-photo ruling. Its earlier heading falsely implied September publication; the corrected heading directs readers to actual repository history. |
 | Amendment 02 | Draft only. The exact local arm, feasibility rule, baseline, and outstanding interpretation choices are not treated as frozen. |
-| Publication | A local candidate does not prove publication. Use the actual Git commit, branch, tag, and release record for publication status. |
+| Publication | Source and technical report are published; released editions are identified by their immutable source revision and tag. Later changes on the default branch are distinguished from an earlier release. |
 
 ## Remaining empirical inputs
 
@@ -24,4 +24,4 @@ The local feasibility evaluation also remains unrun in this repair. It needs a v
 
 ## Package boundary
 
-The public export includes source, tests, generated data, historical aggregate records, protocol drafts, and the technical report. It excludes actual photos, private mappings, real intent/gold files, raw historical responses, local run folders, credential values, internal manifests, and review evidence. The LinkedIn text is a draft; no post was sent.
+The public export includes source, tests, generated data, historical aggregate records, protocol drafts, the technical report and public review summaries. It excludes actual photos, private mappings, real intent/gold files, raw historical responses, local run folders, credential values and private review records. The LinkedIn text is a draft; no post was sent.

@@ -21,3 +21,24 @@ The bundled Patrick Hand font passed table parsing and exactly matched [Google F
 This review is bounded. Known-advisory scanning does not discover all unknown vulnerabilities. Trusted local files and replay folders are not hostile upload surfaces. Credential scrubbing covers literal echoes, not every encoding or transformation. Historical Git tags remain available and may contain defects fixed in the current source. See [SECURITY.md](../SECURITY.md) for practical boundaries and private reporting.
 
 Primary dependency sources: [Pillow Ghostscript argument injection, patched in 13.0.0](https://github.com/python-pillow/Pillow/security/advisories/GHSA-w889-685w-c8fh), [FITS decompression advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-whj4-6x5x-4v2j), and [PSD tile-extent advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-pwv6-vv43-88gr). Advisory applicability depends on format and execution path; no successful exploit was demonstrated here.
+
+
+## Model-response parsing follow-up
+
+Static analysis identified two regular expressions in `parse_json` whose runtime
+grew sharply on malformed responses. A long whitespace run or many unmatched
+opening braces could delay processing even within the response-size limit.
+The parser now removes code fences and locates the outer object with fixed-string
+operations. Strict JSON checks and rejection of conflicting duplicate keys remain.
+
+The regression test supplies two malformed 1 MiB responses in isolated processes.
+Both exceed the five-second deadline with the previous parser; the repaired parser
+finishes both and passes the valid-input and strict-rejection controls. The test is
+part of `tools/run_checks.py`. The affected harness also reports 105 passed checks,
+zero failures and the same seven unavailable checks described above. These results
+support the parser repair; they are not new model or clinical measurements.
+
+Remaining static-analysis path findings were reviewed against the documented local
+command-line inputs and existing containment checks. No new boundary-crossing path
+was confirmed in those reviewed flows. This is a scoped assessment, not a claim
+that every path operation is safe for a hosted service or untrusted operators.

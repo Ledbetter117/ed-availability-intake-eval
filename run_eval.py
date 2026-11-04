@@ -192,17 +192,29 @@ def parse_json(text):
     if not isinstance(text, str):
         return None
     t = text.strip()
-    t = re.sub(r"^```(?:json)?\s*|\s*```$", "", t, flags=re.MULTILINE).strip()
+    # Fixed string operations keep malformed model responses linear to scan.
+    # Split only on LF: JSON strings can contain literal Unicode line separators.
+    lines = []
+    for line in t.split("\n"):
+        if line.startswith("```"):
+            line = line[3:]
+            if line.startswith("json"):
+                line = line[4:]
+            line = line.lstrip()
+        if line.endswith("```"):
+            line = line[:-3].rstrip()
+        lines.append(line)
+    t = "\n".join(lines).strip()
     try:
         return _strict_loads(t)
     except RecursionError:
         return None
     except ValueError:            # json.JSONDecodeError and _Rejected: try the outermost {...} once
         pass
-    m = re.search(r"\{.*\}", t, flags=re.DOTALL)
-    if m:
+    first, last = t.find("{"), t.rfind("}")
+    if 0 <= first < last:
         try:
-            return _strict_loads(m.group(0))
+            return _strict_loads(t[first:last + 1])
         except (ValueError, RecursionError):
             return None
     return None

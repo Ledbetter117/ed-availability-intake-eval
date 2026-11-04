@@ -1,7 +1,7 @@
 # ED Availability Intake — an LLM Extraction Eval
 A documented, synthetic-data evaluation of how accurately a vision LLM turns a filled-in staff-availability calendar into structured scheduling data. Clinical safety and deployment outcomes were not evaluated.
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Data](https://img.shields.io/badge/benchmark%20data-100%25%20synthetic-green) ![License](https://img.shields.io/badge/license-MIT-lightgrey) ![Providers](https://img.shields.io/badge/runs%20on-Anthropic%20%7C%20OpenAI-orange)
+![Python](https://img.shields.io/badge/Python-3.11%2B-blue) ![Data](https://img.shields.io/badge/benchmark%20data-100%25%20synthetic-green) ![License](https://img.shields.io/badge/license-MIT-lightgrey) ![Providers](https://img.shields.io/badge/runs%20on-Anthropic%20%7C%20OpenAI-orange)
 
 **Author:** Galen Coulter-Ledbetter, RN, Paramedic · working ED nurse · Paramedic licensure held in Florida · military medical education and readiness leadership · daily multi-EHR and clinical-AI user.
 
@@ -45,14 +45,14 @@ These checks use saved public data and synthetic responses, including temporary 
 | **Documents with a status error** | **0 / 40** (Wilson upper 8.8%) | **9 / 40 = 22.5%** [12.3%, 37.5%] |
 | **Documents with ANY status or note error** | **1 / 40 = 2.5%** | **12 / 40 = 30.0%** [18.1%, 45.4%] |
 
-> **The last row is the honest answer to *"how often does a document come back wrong?"*** The row above it counts status errors only, which is why the two disagree. Rates indexed on *predicted* notes use 147 and 145 as denominators; rates indexed on *gold* notes use 146. Those are different questions. See [`docs/METHODS.md`](docs/METHODS.md) §5.
+> **The last row counts documents with any status or note error.** The row above it counts status errors only. Rates indexed on *predicted* notes use 147 and 145 as denominators; rates indexed on *gold* notes use 146. Those are different questions. See [`docs/METHODS.md`](docs/METHODS.md) §5.
 
 > ### 📄 Read [`docs/CORRECTIONS.md`](docs/CORRECTIONS.md) first.
 > One of the metrics in the table above was named for a failure it did not measure. The correction is public and `v1.0.0` is preserved as a tag so the two can be read side by side.
 
 Per-slice breakdowns: [`results/summary.md`](results/summary.md) (Sonnet) · [`results_haiku/summary.md`](results_haiku/summary.md) (Haiku). Row-level data in each folder's `per_case.csv`.
 
-**The honest finding: Sonnet 5 saturates this benchmark.** 100% day-level accuracy on every slice, including handwritten, with zero robustness delta. Its only error in 40 cases: one duplicated note — the real "charge only" annotation from July 2 also asserted on July 1, whose cell has no note (`sample_01_clean`). Saturation is a result, not a disappointment: it locates this difficulty tier relative to **one recorded model configuration on one date** and motivates the v2 tier on the roadmap.
+**The saved Sonnet run reached 100% day-level accuracy on this benchmark.** Every slice, including the synthetic handwritten slice, had 100% status accuracy. Its only recorded error in 40 cases was a duplicated note: the "charge only" annotation from July 2 was also asserted on July 1, whose cell has no note (`sample_01_clean`). This result describes **one recorded model configuration on one date** and motivates a harder evaluation tier.
 
 **Haiku's failures are mostly geometric, not glyphic.** Its handwritten slice is perfect; the errors cluster in spatial indexing. Worst case: a one-day grid shift on a faint calendar (`sample_11_lowcontrast`) misread 9 days and produced 3 phantom-available days in a single document. Under rotation, notes landed exactly one week-row down (`sample_02_rotated`: "no call" 18th→25th, "early out" 24th→31st). The notable failures are traced case by case in [`analysis.md`](analysis.md). Raw model output is not shipped; see [`docs/METHODS.md`](docs/METHODS.md).
 
@@ -61,7 +61,7 @@ Per-slice breakdowns: [`results/summary.md`](results/summary.md) (Sonnet) · [`r
 ---
 
 ## The asymmetric status error
-Not all misreads are equal. A model that reads `AM` as `PM` dirties the data. A model that reads **UNAVAILABLE as available** produces incorrect availability data. If that error escaped human review and downstream scheduling checks, it could affect a schedule; this evaluation did not test that pathway. That `UNAVAILABLE → available` flip is this eval's **critical-error rate**, weighted and reported separately from ordinary accuracy, because it is the **asymmetric-cost** failure mode: expensive to discover late, cheap to prevent at authoring. (v1 called this "the patient-safety-analog failure mode"; no deployment in which a machine reads these unsupervised has been demonstrated, so that framing claimed more than the work established. See [`docs/CORRECTIONS.md`](docs/CORRECTIONS.md) §5.)
+Not all misreads have the same meaning. Reading `AM` as `PM` changes a stated shift; reading **UNAVAILABLE as available** creates availability the person did not provide. If that error escaped human review and downstream scheduling checks, it could affect a schedule. This evaluation did not test that pathway or measure prevention and correction costs. The `UNAVAILABLE → available` flip is the evaluation's **critical-error rate**, reported separately from ordinary accuracy to expose this particular error. The earlier patient-safety framing was withdrawn because no clinical deployment or safety outcome was measured; see [`docs/CORRECTIONS.md`](docs/CORRECTIONS.md) §5.
 
 ## The task under test
 **Input:** an image of a filled-in monthly availability calendar.
@@ -139,10 +139,10 @@ A working tool proves *"I can build."* An eval demonstrates how to define a task
 ## Product vision (what this is the front door of)
 A possible future project is an ED scheduling system that ingests availability in whatever form it arrives, maps the scheduling period, projects daily assignments, adapts to callouts / census swings / travel-contract turnover / orientation double-assignments, and surfaces holes before they happen. That's a constraint-optimization + integration build. **This eval measures transcription errors in a bounded synthetic intake task** — an optimizer fed bad intake produces confidently wrong schedules.
 
-## Honest limitations
+## Limitations
 > **Fuller treatment: [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md)** — including the two that matter most: one stored configuration reaches **100% status accuracy** (that ceiling cannot establish rankings among other or current models), and slice comparisons **confound rendering with content** by construction (`seed = 7 + i`, `style = i % 4`).
 
-Synthetic calendars — even the handwritten slice — are cleaner and more uniform than real-world artifacts; performance on real photographs is **unknown**, and these results do not define a mathematical upper bound. One run per model (two models), unless the variance check is reported. LLM-as-judge (optional, used in no published result) is the model under test itself. Single-author rubric. Stated, not hidden — naming the limits is part of the competency.
+Synthetic calendars — even the handwritten slice — are cleaner and more uniform than real-world artifacts; performance on real photographs is **unknown**, and these results do not define a mathematical upper bound. There is one run per recorded model and no run-to-run variance estimate. The optional LLM-as-judge uses the model under test itself; no published result uses that option. The rubric has one author.
 
 ## Repo layout
 ```
@@ -160,7 +160,7 @@ ed-availability-intake-eval/
 ├── analysis.md            # failure-mode writeup traced to per_case.csv rows
 ├── analysis-v2.md         # metric audit: typed error split, corrected Finding 2, calendar-level CIs
 ├── typed_errors.json      # per-model totals for every error type
-├── calendar_level.csv     # per-calendar rates (the honest unit of analysis)
+├── calendar_level.csv     # per-calendar rates and uncertainty
 ├── requirements.txt
 └── docs/                  # METHODS · CORRECTIONS · LIMITATIONS · PROBE (pre-registration)
 ```
