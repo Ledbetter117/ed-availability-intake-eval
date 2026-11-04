@@ -1,14 +1,18 @@
 {
   "_schema": {
-    "_READ_THIS_FIRST": "The note categories are NOT all mutually exclusive. Summing them exceeds gold_note_items_examined. That is intended; see below.",
-    "status": "Cell-level. CRITICAL_FLIP | DISPLACED | MISREAD | OK partition the 1,240 day-cells per model. Sum == 1240.",
+    "_READ_THIS_FIRST": "The note categories are indexed on TWO DIFFERENT THINGS -- some count gold items, some count predicted items. Summing them all is meaningless. See 'notes' below.",
+    "_corrected": "2026-09-12. The previous version of this block said 'NOTE_DISPLACED is a SUBSET of NOTE_OK'. That was FALSE and is withdrawn -- claude-haiku-4-5 / sample_02_rotated has note_ok=0 and note_displaced=2, and two things cannot be a subset of zero things. Found by external QA review (F06). The counts in this file never changed; only the stated relationship between them was wrong. The fabrication denominators were also corrected from gold items to predicted instances (F10). The one-decimal displacement percentages are unchanged; the sonnet fabrication upper bound moves from 2.6% to 2.5% (corrected 2026-09-25 -- the 2026-09-12 text said it was unchanged).",
+    "status": "Cell-level. CRITICAL_FLIP | DISPLACED | MISREAD | OK partition the 1,240 day-cells per model. Sum == 1240. These four ARE mutually exclusive.",
     "notes": {
-      "partition": "NOTE_OK + NOTE_OMISSION == gold_note_items_examined (146). These two, and only these two, partition the gold notes.",
-      "overlay": "NOTE_DISPLACED is a SUBSET of NOTE_OK, not a sibling of it. A displaced note has correct text (so it is NOTE_OK) attached to the wrong day. Summing OK+OMISSION+DISPLACED double-counts the displaced ones.",
-      "note_displacement_rate": "NOTE_DISPLACED / gold_note_items_examined. sonnet 1/146 = 0.7%; haiku 9/146 = 6.2%. These are the README's 'Note displacement rate' row.",
-      "fabrication": "A fabricated note would be text absent from the page. There is no such category here because the count is zero for both models: 0/146 each, Wilson 95% upper 2.6%."
+      "gold_indexed": "NOTE_OK and NOTE_OMISSION are outcomes of a GOLD note: was the gold item captured at its correct location, or not? These two, and only these two, partition gold_note_items_examined (146).",
+      "prediction_indexed": "NOTE_DISPLACED is an outcome of a PREDICTED note -- a note the model emitted at a location that is not its gold location. It is counted over predictions, not over gold items. It is NOT a member of the gold partition and has NO fixed relationship to NOTE_OK.",
+      "why_it_cannot_be_one_relationship": "claude-sonnet-5 / sample_01_clean: gold=5, NOTE_OK=5, NOTE_OMISSION=0, NOTE_DISPLACED=1 -- every gold note captured correctly PLUS an extra copy on a wrong day; there the displaced note duplicates a correct one. claude-haiku-4-5 / sample_02_rotated: gold=2, NOTE_OK=0, NOTE_OMISSION=2, NOTE_DISPLACED=2 -- both gold notes missing from their correct days and appearing one week-row down; there exact-location fidelity is ZERO and the displaced notes are the moved originals. Same column, two different events.",
+      "predicted_note_instances": "claude-sonnet-5 emitted 147 note instances; claude-haiku-4-5 emitted 145. These are the denominators for anything indexed on predictions.",
+      "note_displacement_rate": "NOTE_DISPLACED / predicted note instances. sonnet 1/147 = 0.7%; haiku 9/145 = 6.2%. These are the README's 'Note displacement rate' row. (The published figures used 146 as the denominator; at one decimal place the percentages are identical.)",
+      "fabrication": "A fabricated note is text absent from the page -- an outcome of a PREDICTED instance, so its denominator is predicted instances, not gold items. Count is zero for both models: 0/147 (sonnet, Wilson 95% upper 2.55%) and 0/145 (haiku, upper 2.58%). At one decimal place these are 2.5% and 2.6%. (Corrected 2026-09-25: the 2026-09-12 text said both round to 2.6%; 2.547% rounds to 2.5%. The 2.6% previously published for sonnet was the gold-indexed bound, 0/146.) A note can be invented on a page carrying no gold notes at all, which is why a gold-normalised fabrication rate is not a probability.",
+      "independence_caveat": "Notes within one page, and both models read on the same pages, are not independent trials. These intervals are descriptive of this corpus."
     },
-    "relationship_to_calendar_level_csv": "DIFFERENT UNIT, SAME WORD. The 'displaced' column in calendar_level.csv is the CELL-level status DISPLACED (sonnet 0, haiku 19 of 1,240 cells). The README's 'Note displacement rate' is NOTE-level (this file). They are not the same quantity and will not agree; neither is derivable from the other."
+    "relationship_to_calendar_level_csv": "DIFFERENT UNIT, SAME WORD. The 'displaced' column in calendar_level.csv is the CELL-level status DISPLACED (sonnet 0, haiku 19 of 1,240 cells). NOTE_DISPLACED here is NOTE-level. They are not the same quantity, will not agree, and neither is derivable from the other."
   },
   "claude-sonnet-5": {
     "status": {
@@ -18,7 +22,8 @@
       "NOTE_OK": 146,
       "NOTE_DISPLACED": 1
     },
-    "gold_note_items_examined": 146
+    "gold_note_items_examined": 146,
+    "predicted_note_instances": 147
   },
   "claude-haiku-4-5": {
     "status": {
@@ -32,6 +37,7 @@
       "NOTE_OMISSION": 10,
       "NOTE_DISPLACED": 9
     },
-    "gold_note_items_examined": 146
+    "gold_note_items_examined": 146,
+    "predicted_note_instances": 145
   }
 }

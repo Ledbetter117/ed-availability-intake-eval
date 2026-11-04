@@ -14,7 +14,7 @@ Difficulty slices:
                  bundled in assets/fonts/).
 
 Usage:
-    python3 generate_dataset.py --n 40 [--seed 7] [--out ./data]
+    python3 generate_dataset.py [--n 40] [--seed 7] [--out ./data]
 """
 import os, json, random, argparse, calendar, datetime
 from PIL import Image, ImageDraw, ImageFont
@@ -135,13 +135,48 @@ def render(truth, emp, style, out_png, rng):
     img.save(out_png)
 
 
+def positive_int(text):
+    """--n must be 1 or more; 0 or a negative number is a usage error, not a traceback (QA)."""
+    try:
+        value = int(text)
+    except ValueError:
+        raise argparse.ArgumentTypeError(f"{text!r} is not an integer")
+    if value < 1:
+        raise argparse.ArgumentTypeError("must be 1 or more")
+    return value
+
+
+def move_stale_samples(out_dir, keep):
+    """Move sample files this run will not rewrite to <out>/_previous/<UTC time>/ before writing.
+
+    A smaller or differently sized run must not leave a silently mixed dataset behind (QA:
+    generator_shrinking_output_not_silently_40_cases). Nothing is deleted."""
+    stale = sorted(f for f in os.listdir(out_dir)
+                   if f.startswith("sample_") and f.endswith((".png", ".gold.json")) and f not in keep)
+    if not stale:
+        return None
+    stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    dest, k = os.path.join(out_dir, "_previous", stamp), 1
+    while os.path.exists(dest):
+        k += 1
+        dest = os.path.join(out_dir, "_previous", f"{stamp}-{k}")
+    os.makedirs(dest)
+    for f in stale:
+        os.replace(os.path.join(out_dir, f), os.path.join(dest, f))
+    return dest
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--n", type=int, default=4)
+    ap.add_argument("--n", type=positive_int, default=40)   # the shipped dataset; was 4
     ap.add_argument("--seed", type=int, default=7)
     ap.add_argument("--out", default=os.path.join(HERE, "data"))
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
+    names = [f"sample_{i + 1:02d}_{STYLES[i % len(STYLES)]}" for i in range(a.n)]
+    moved = move_stale_samples(a.out, {b + ext for b in names for ext in (".png", ".gold.json")})
+    if moved:
+        print(f"moved sample files this run does not rewrite to {moved}")
     index = []
     for i in range(a.n):
         seed = a.seed + i

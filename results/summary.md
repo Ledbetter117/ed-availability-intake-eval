@@ -4,7 +4,7 @@
 |---|---|---|---|---|---|
 | Day-level accuracy | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% |
 | **Critical-error rate** (UNAVAILABLE→available) | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% |
-| Hallucination rate (notes) | 0.7% | 2.4% | 0.0% | 0.0% | 0.0% |
+| Note mismatch rate — NOT the typed split, see docs/CORRECTIONS.md | 0.7% | 2.4% | 0.0% | 0.0% | 0.0% |
 | Note fidelity (normalized match) | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% |
 | Format validity | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% |
 

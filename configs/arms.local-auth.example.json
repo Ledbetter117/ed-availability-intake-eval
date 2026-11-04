@@ -1,0 +1,91 @@
+{
+  "config_version": "local-auth-example-r74",
+  "status_note": "Disabled example for an OpenAI-compatible endpoint on loopback. Synthetic public cases only. Replace model and limits only after recording a frozen run protocol; no dispatch is enabled here.",
+  "case_set": {
+    "id": "published-40",
+    "data_dir": "data",
+    "seed_base": 7,
+    "role": "diagnostic and compatibility set; public since 2026-09; exposure disclosed in every report",
+    "data_class": "public_synthetic",
+    "include": [
+      "sample_01_clean",
+      "sample_02_rotated",
+      "sample_03_lowcontrast",
+      "sample_04_handwritten"
+    ]
+  },
+  "protocol": {
+    "protocol_id": "ED-MM-CAPABILITY-0.1-candidate",
+    "task": "run_eval.TASK_PROMPT unchanged (transcription reading; see protocol/PROTOCOL.md section 3)",
+    "trials": 1,
+    "order_seed": "ed-mm-2026-10-26",
+    "content_repair_retries": 1,
+    "backoff_s": [
+      2,
+      8,
+      30
+    ],
+    "image_policy": "the stored PNG bytes, media type image/png, no resizing or re-encoding by the harness; provider-side resizing is recorded where the provider reports it",
+    "context_policy": "one fresh single-turn request per attempt; no system prompt; no earlier turns; no reference labels; no other arm's output",
+    "tools": "none",
+    "capability_check": true
+  },
+  "dispatch": {
+    "enabled": false
+  },
+  "run_caps": {
+    "max_calls_total": null,
+    "max_elapsed_s": null,
+    "max_usd": null
+  },
+  "prices_usd_per_mtok": null,
+  "trusted_local_hosts": [],
+  "arms": [
+    {
+      "arm_id": "local-auth-example",
+      "role": "one open-weight VISION configuration, local only; the candidate model is chosen only after its image input is shown by the capability check",
+      "provider": "openai_compatible_local",
+      "route": "local",
+      "endpoint": "http://127.0.0.1:8000/v1/chat/completions",
+      "model_requested": "TBD-AT-EXECUTION",
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "image_capability_verified": false,
+      "credential_env": "ED_LOCAL_API_KEY",
+      "max_output_tokens": 4096,
+      "sampling": {
+        "temperature": null,
+        "seed": null
+      },
+      "thinking": null,
+      "image_detail": null,
+      "image_preprocessing": "none",
+      "allowed_data_classes": [
+        "public_synthetic",
+        "private_local_only"
+      ],
+      "status": "queued",
+      "dispatch_enabled": false,
+      "limits": {
+        "max_calls": null,
+        "max_attempts_per_trial": 2,
+        "timeout_s": 600,
+        "max_input_tokens_total": null,
+        "max_output_tokens_total": null
+      },
+      "local_runtime": {
+        "runtime": "TBD",
+        "runtime_version": "TBD",
+        "weights_sha256": "TBD",
+        "quantization": "TBD",
+        "chat_template": "TBD",
+        "num_ctx": null,
+        "gpu": "TBD",
+        "served_model_digest": "TBD"
+      },
+      "notes": "This is an example address, not a claim that a service is listening. The selected credential must be set at dispatch. It is refused on non-loopback destinations."
+    }
+  ]
+}

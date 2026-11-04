@@ -1,0 +1,90 @@
+{
+  "scope": "Historical synthetic observations, recomputed from saved records on 2026-11-03; no new model inference. Model labels are recorded strings, not independent provider-identity verification.",
+  "models": {
+    "claude-sonnet-5": {
+      "cases": 40,
+      "slices": {
+        "clean": 10,
+        "handwritten": 10,
+        "lowcontrast": 10,
+        "rotated": 10
+      },
+      "cells": 1240,
+      "status_errors": 0,
+      "correct_statuses": 1240,
+      "critical_flips": 0,
+      "gold_unavailable": 316,
+      "status_error_documents": 0,
+      "any_error_documents": 1,
+      "gold_notes": 146,
+      "correct_location_notes": 146,
+      "displaced_notes": 1,
+      "fabricated_notes": 0,
+      "predicted_notes": 147
+    },
+    "claude-haiku-4-5": {
+      "cases": 40,
+      "slices": {
+        "clean": 10,
+        "handwritten": 10,
+        "lowcontrast": 10,
+        "rotated": 10
+      },
+      "cells": 1240,
+      "status_errors": 26,
+      "correct_statuses": 1214,
+      "critical_flips": 6,
+      "gold_unavailable": 316,
+      "status_error_documents": 9,
+      "any_error_documents": 12,
+      "gold_notes": 146,
+      "correct_location_notes": 136,
+      "displaced_notes": 9,
+      "fabricated_notes": 0,
+      "predicted_notes": 145
+    }
+  },
+  "mapping": {
+    "cases": "calendar_level.csv row count per model",
+    "slices": "calendar_level.csv row count grouped by model and slice",
+    "cells": "sum calendar_level.csv cells",
+    "status_errors": "sum calendar_level.csv status_errors",
+    "correct_statuses": "cells minus status_errors; checked against typed_errors.json status.OK",
+    "critical_flips": "sum calendar_level.csv critical_flips",
+    "gold_unavailable": "sum calendar_level.csv gold_unavailable",
+    "status_error_documents": "count calendar_level.csv rows with status_errors > 0",
+    "any_error_documents": "count calendar_level.csv rows with positive status_errors or note_omission or note_displaced or note_fabricated",
+    "gold_notes": "sum calendar_level.csv gold_note_items_examined",
+    "correct_location_notes": "sum calendar_level.csv note_ok",
+    "displaced_notes": "sum calendar_level.csv note_displaced",
+    "fabricated_notes": "sum calendar_level.csv note_fabricated",
+    "predicted_notes": "sum per_case.csv predicted_notes; checked against typed_errors.json predicted_note_instances",
+    "historical_models_and_runs": "Two model-labelled result folders; original README reports one historical run per model. Origin and served identity are not independently authenticated."
+  },
+  "sources": [
+    {
+      "path": "calendar_level.csv",
+      "sha256": "de7cec33870cda0c0ea0c68bdd94b8dc0aad187c1c989ebe952275650ab51e18"
+    },
+    {
+      "path": "typed_errors.json",
+      "sha256": "be1f2f09fc31c201fce63e793b2e71e832a3152e954041e992c8a85aa356c278"
+    },
+    {
+      "path": "results/per_case.csv",
+      "sha256": "6f862703a4c7b130e34c470284f489412b0442af984c98edd0cb2140b302d2ee"
+    },
+    {
+      "path": "results_haiku/per_case.csv",
+      "sha256": "58661689d78aad34a40aba1877246263a2fc7b1270ab7f70ca1b576562a28270"
+    },
+    {
+      "path": "results/metrics.json",
+      "sha256": "2e4474f5b7444c98107f864332ebd591c9cb7552f9a6cbf95b11b0d7c1f1ca3f"
+    },
+    {
+      "path": "results_haiku/metrics.json",
+      "sha256": "b430911a1e1b76701047ce987a02ff1fc6123746e15561150175d5b9801bae43"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+ "per_arm": {
+  "hist-sonnet": {
+   "conflict_days": 59,
+   "pred_equals_marked_status": 59,
+   "pred_reconciled_to_note": 0,
+   "other": 0,
+   "non_matching": []
+  },
+  "hist-haiku": {
+   "conflict_days": 59,
+   "pred_equals_marked_status": 59,
+   "pred_reconciled_to_note": 0,
+   "other": 0,
+   "non_matching": []
+  }
+ },
+ "per_note": {
+  "No Mondays": 27,
+  "No weekends": 19,
+  "Days only": 13
+ },
+ "cases": [
+  "sample_01_clean",
+  "sample_04_handwritten",
+  "sample_05_clean",
+  "sample_06_rotated",
+  "sample_08_handwritten",
+  "sample_13_clean",
+  "sample_17_clean",
+  "sample_18_rotated",
+  "sample_20_handwritten",
+  "sample_22_rotated",
+  "sample_24_handwritten",
+  "sample_27_lowcontrast",
+  "sample_32_handwritten",
+  "sample_33_clean",
+  "sample_34_rotated",
+  "sample_38_rotated"
+ ]
+}

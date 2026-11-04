@@ -25,7 +25,7 @@ Case *i* uses `seed = 7 + i` and `style = STYLES[i % 4]`. Content and render sty
 
 Every apparent difference between `clean`, `rotated`, `lowcontrast` and `handwritten` is a difference in *both* the calendar's content and its rendering, and no analysis can separate them after the fact. Haiku's `lowcontrast` slice shows 5.8% and its `handwritten` slice 0.0% — **that is not evidence that low contrast is harder than handwriting.** It is one confounded comparison across ten calendars each.
 
-Slice figures are **descriptive only**. `analysis-v2.md` §A4 reports cell-level intervals (labelled as such, and anticonservative) beside the calendar-level figure — *the fraction of documents with at least one error* — which is the honest unit.
+Slice figures are **descriptive only**. `analysis-v2.md` §A4 reports cell-level intervals (labelled as such, and anticonservative) beside the calendar-level figures, which are the honest unit. **Two calendar-level figures are reported and they differ:** documents with a **status** error (haiku 9/40 = 22.5%), and documents with **any** status *or* note error (haiku 12/40 = 30.0%; sonnet 1/40 = 2.5%). *Corrected 2026-09-12 — QA finding F07; this section previously named only the first and described it as "at least one error."*
 
 *Fixing this requires crossing content with style — the same content rendered four ways — which the generator does not currently do.*
 
@@ -33,7 +33,7 @@ Slice figures are **descriptive only**. `analysis-v2.md` §A4 reports cell-level
 
 ## 3 · The handwriting is not handwriting
 
-The `handwritten` slice is a **typeface** (Patrick Hand) with each glyph tile rotated ±7°. It has uniform stroke weight, perfect baseline spacing, no pressure variation, no self-corrections, no ink outside the cell, no crossings-out, no personal abbreviations, no cramming.
+The `handwritten` slice is a **typeface** (Patrick Hand), with each written string drawn as one tile and rotated up to ±7°. If the bundled font fails to load, `generate_dataset.py` falls back to the typed font without warning, so a regenerated handwritten slice could silently be typed. This is tracked with the deferred font findings. It has uniform stroke weight, perfect baseline spacing, no pressure variation, no self-corrections, no ink outside the cell, no crossings-out, no personal abbreviations, no cramming.
 
 Real availability sheets have all of those, because they are filled in by a tired person against a deadline. **This slice tests a font, not a hand.** How much harder genuine handwriting is for these models is **not measured here and no source is cited for it** — it is the open question, not a known quantity.
 
@@ -75,7 +75,7 @@ July 2026, 31 days, a single grid geometry and a single status vocabulary. Nothi
 
 Every number here is gated by a check that must be able to fail — a scorer self-test that must detect a deliberately injected error, an integration test that refuses a run producing no verdict, and a pre-push sweep whose negative checks each carry a positive control. Author review is not treated as a control.
 
-**Every correction in [`CORRECTIONS.md`](CORRECTIONS.md) was found by an adversarial review pass conducted before publication, not by the author re-reading his own work** — separate model sessions given adversarial instructions and no sight of earlier review output, with each finding then verified by hand against the shipped data. That method is disclosed because a repository about model reliability should say how its own reliability was checked.
+**[`CORRECTIONS.md`](CORRECTIONS.md) states how each correction was found.** Corrections 1–5 came from auditing the artifact against itself with a separate typed scorer. Correction 6 came from an adversarial review pass before publication. The follow-ups came from an external QA review after publication. Each review pass ran as a separate model session with no sight of earlier review output, and each finding was verified by hand against the shipped data. That method is disclosed because a repository about model reliability should say how its own reliability was checked.
 
 ---
 

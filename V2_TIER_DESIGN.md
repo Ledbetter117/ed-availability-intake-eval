@@ -4,7 +4,7 @@
 
 ## Design constraints (inherited, non-negotiable)
 
-Ground truth by construction (pattern generated first, then rendered — zero labeling). 100% synthetic, no PHI possible. Byte-for-byte reproducible from a seed. v1 slice names and files untouched; v2 slices get new names. Every v2 knob maps to a real-world artifact property a charge nurse actually receives.
+Ground truth by construction (pattern generated first, then rendered — zero labeling). 100% synthetic: no real person's schedule, name or identifier appears. Reproducible from a seed (byte-identical given the pinned Pillow build; see README). v1 slice names and files untouched; v2 slices get new names. Every v2 knob maps to a real-world artifact property a charge nurse actually receives.
 
 ## Current v1 constants (from `generate_dataset.py`)
 
@@ -27,7 +27,7 @@ Highest-value additions are the **combined** slices (`hand-photo`, `hand-faint`)
 
 ## Protocol
 
-Generate v2 with a fresh seed; publish both-model baselines (Sonnet + Haiku) with the tier, same metrics, same honesty rules. For harness search: search set = v2 generation under seed A; held-out = v2 under seed B (+ frozen v1 as a no-regression check). Decontamination is inherent — different seeds share no bytes.
+Generate v2 with a fresh seed; publish both-model baselines (Sonnet + Haiku) with the tier, same metrics, same honesty rules. For harness search: search set = v2 generation under seed A; held-out = v2 under seed B (+ frozen v1 as a no-regression check). Decontamination is **not** automatic: case *i* uses seed `start + i`, so two start seeds closer than the case count share truths (the external audit found start seeds 7 and 11 share 36 of 40). Choose seed ranges that do not overlap (`B ≥ A + n`) and verify by hashing every generated truth before any run. *(Corrected 2026-10-22; the earlier sentence said different seeds share no bytes.)*
 
 ## Acceptance criteria for shipping v2
 

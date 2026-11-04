@@ -1,0 +1,5 @@
+# Preserve reviewed byte hashes across platforms.
+* -text
+*.pdf binary
+*.png binary
+*.ttf binary

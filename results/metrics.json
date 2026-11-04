@@ -7,6 +7,7 @@
     "critical_error_rate": 0.0,
     "critical_flips": 0,
     "gold_unavailable_days": 316,
+    "note_mismatch_rate": 0.006802721088435374,
     "hallucination_rate": 0.006802721088435374,
     "note_fidelity": 1.0,
     "format_validity": 1.0
@@ -18,6 +19,7 @@
       "critical_error_rate": 0.0,
       "critical_flips": 0,
       "gold_unavailable_days": 65,
+      "note_mismatch_rate": 0.023809523809523808,
       "hallucination_rate": 0.023809523809523808,
       "note_fidelity": 1.0,
       "format_validity": 1.0
@@ -28,6 +30,7 @@
       "critical_error_rate": 0.0,
       "critical_flips": 0,
       "gold_unavailable_days": 89,
+      "note_mismatch_rate": 0.0,
       "hallucination_rate": 0.0,
       "note_fidelity": 1.0,
       "format_validity": 1.0
@@ -38,6 +41,7 @@
       "critical_error_rate": 0.0,
       "critical_flips": 0,
       "gold_unavailable_days": 87,
+      "note_mismatch_rate": 0.0,
       "hallucination_rate": 0.0,
       "note_fidelity": 1.0,
       "format_validity": 1.0
@@ -48,6 +52,7 @@
       "critical_error_rate": 0.0,
       "critical_flips": 0,
       "gold_unavailable_days": 75,
+      "note_mismatch_rate": 0.0,
       "hallucination_rate": 0.0,
       "note_fidelity": 1.0,
       "format_validity": 1.0

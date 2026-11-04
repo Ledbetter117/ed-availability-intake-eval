@@ -6,6 +6,10 @@
 
 # Raw API responses (regenerable; may be large) — covers results/, results_haiku/, any future per-model dirs
 results*/raw/
+# v1.2 (r4): a rerun moves the previous outputs, raw/ included, to <out>/_previous/<UTC>/.
+# Keep the archived raw responses private as well (review P06-ED F02).
+results*/_previous/
+**/_previous/**/raw/
 
 # Python
 __pycache__/
@@ -19,12 +23,32 @@ Thumbs.db
 # Real-world artifacts — NEVER commit or publish (employer data, internal identifiers)
 data_private/
 
-# Arm B private mapping — abstract document IDs to real photo filenames, months and the
-# writer's own encodings. The ONLY place those appear. Never commit, never publish.
-kit-B/private-map.json
-probe/kit-B/private-map.json
+# Arm B private mapping — abstract document IDs to real photo filenames, per-document months
+# and the writer's own encodings. Filenames, encodings and the month of each document appear
+# only here; the pre-registrations name the documents' overall date range and one month.
+# Never commit, never publish.
+# Anchoring corrected 2026-09-12: the patterns below were ROOT-anchored, so they protected
+# kit-B/ only if it landed at the repository root. The probe kit actually lives at
+# ed-eval-probe/kit-B/, which the root-anchored forms did NOT cover. Every rule is now
+# depth-independent. A gitignore keeps files out of commits; it is not access control (see
+# docs/PROBE-AMENDMENT-01.md section 4b). It must at least cover the paths the code really writes.
 **/private-map.json
-probe-run/
-probe_b_results/probe_b_results.json
-kit-B/*.gold.json
-probe/kit-B/*.gold.json
+**/kit-B/*.gold.json
+**/kit-B/intent_*.csv
+**/probe-run/
+**/probe_b_results/
+**/probe_results/raw/
+**/photos/
+results*/raw/
+
+# Local review and working files -- never commit (added 2026-09-25).
+# .qa-review/ holds an external QA review, its virtualenv and generated artefacts; its own
+# .gitignore covered only the venv and caches, so `git add -A` would have staged the review.
+.qa-review/
+venv/
+# The Arm B intent workbook holds real months and legends once it is filled in.
+**/*_FOUNDER*.docx
+
+# Multi-model runs (r6): raw answers, attempt ledgers and run status. Regenerable from a recorded run;
+# raw answers stay private like results*/raw/. Configuration (configs/) stays trackable.
+mm_runs/
