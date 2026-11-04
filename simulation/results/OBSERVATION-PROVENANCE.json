@@ -1,0 +1,946 @@
+{
+  "source_observation_file_sha256": "48cad14637f1957c515a22556ba90327529b66fc4a56f6b2d9c0a4281d40e4e2",
+  "source_receipt_file_sha256": "6e37b417a926e3db826ce834a2a970482806ca010c885ead715965f9b1240e1f",
+  "freeze_sha256": "adc7f1ef7db8a3f5f94577617e4e4f666905d07584d5ef37eecc38cd1a59f519",
+  "assistant_text_unchanged": true,
+  "metadata_projection_metrics_identical": true,
+  "raw_transport_bytes": "retained in original execution evidence; public assistant texts are exact UTF-8 projections",
+  "records": [
+    {
+      "request_id": "r23582fdad6756161",
+      "assistant_text_sha256": "78300c8298969502a29985c0c3e5cd07420285653a4bbbb9b5624433b7f886ae",
+      "source_raw_response_sha256": "1d27c7aef04ff596cdc61edb135997cf8eb6b55bdd693bae1d2b1ee027a21f2a",
+      "native_state_sha256": "edcdc7294df24dd33bee3975433c108d50599c561afa9a9e9a4dc760f9c4103b",
+      "native_spec_sha256": "b4790d85cf22bfbedcf4a129583b4ccc11982ee8ab1dd3b61094dc07c9812a90",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 6.028,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 589,
+        "total_tokens": 1647,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r4b8cbedc2f296132",
+      "assistant_text_sha256": "40faf3e32f87d85fe6539bf8ff5e5ec39e237473b05de2cfdea55fe69996163f",
+      "source_raw_response_sha256": "dffc39908ef3fb620d7df7f7b732d18f26196420a985c9bce45b6cef2e414679",
+      "native_state_sha256": "e34dfe01107a1ea446d83a1f44a356727e830b37025fe38d105b16b98d42a777",
+      "native_spec_sha256": "a8704fadbd89b51994f7f610a10f22f20e77032cf7cb60a1f98312e03c797e46",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.78,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 613,
+        "total_tokens": 1671,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r544a6f194b3f8331",
+      "assistant_text_sha256": "9c48666222f73a840db876f9e88dc76bb2eb67b810de0cc716c65971208a3e2c",
+      "source_raw_response_sha256": "6f797b186f0dda8a0b9f886d3e4064a4a04a81e050d714cc3ad9d47df12f259d",
+      "native_state_sha256": "1a8716e7b23a4fe66e38945703d4ee398938bf8d9a86686d8262aacd8722335e",
+      "native_spec_sha256": "23db18fc4816159a2b93217d80c1dbdcfb9ad1fe1872331ae07c9613945cce47",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.951,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1085,
+        "completion_tokens": 616,
+        "total_tokens": 1701,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "rdabd35ebf3e8c919",
+      "assistant_text_sha256": "79f201b30928ff367d745b1b93ae13b4add1dcf43cf9146e8a5e436910285d51",
+      "source_raw_response_sha256": "c7eb3e8f414464086dab8da0691e2804c07c437eb586fc4acf0b762dcf8b0199",
+      "native_state_sha256": "f395ece85b198f1b2eb2a73a89a57a853675777eb9d8523fdf97c28e58fcf749",
+      "native_spec_sha256": "31696cc2fcc46c42f40ac27ef48cc195d44a9195020e93f5a53edf94fc3887e8",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.788,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 617,
+        "total_tokens": 1675,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "re706c5a3164fde64",
+      "assistant_text_sha256": "80ae49c112ee4d43cc0b68b8c4c5145397e996bf69c2fd8e6b67d4d9a1e9f661",
+      "source_raw_response_sha256": "613dc1036146abcbe810413e87f45375707aafae2ef030423a5058066fba4872",
+      "native_state_sha256": "76e82f1ebb25300539abeb74d61dc8c6a263b0cb1861ca5028a12c5b6887c4a2",
+      "native_spec_sha256": "abdb38727119ea4443db0509ab722fe601f8a262ca79123b8647e44e093a3d1b",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 6.011,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1085,
+        "completion_tokens": 629,
+        "total_tokens": 1714,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r354327fdf0ccb69d",
+      "assistant_text_sha256": "cb3e0d84a32acd6a246084b52320ae3a7bffbcd6f0a8df5c7cf845264224761b",
+      "source_raw_response_sha256": "460485c3d12558cf20098628ba07b753f596f67f23fd701c83d5d44651287ef8",
+      "native_state_sha256": "89ff27f33bc41bb3a2cb4a75da7e60fa81053731427785b3e1c2d260c715cf43",
+      "native_spec_sha256": "1f2f684fcc3ab0665c1183c7a71e294b6eb2f62d091a4b0f61c3870e1ce8d334",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.623,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 594,
+        "total_tokens": 1652,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "re65f90ee921097a0",
+      "assistant_text_sha256": "6936a80e357a76d58926560a218b31b2df5bff9dcd378332e0196dcf162efaae",
+      "source_raw_response_sha256": "f034d4f9abce92570eefa2c48e5feb5217682663f4ba15f49e1a265cb1bbbace",
+      "native_state_sha256": "9647391c3336263cf63a1264e5122aa749f80c21f39cecf7bc2b82501c4354d8",
+      "native_spec_sha256": "5a849847d4ba13a6ff4a0b52d7710d3886fa006101ddca1005156a19d9a3bdf2",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.585,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 589,
+        "total_tokens": 1647,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r732ff042c44a31b5",
+      "assistant_text_sha256": "4203025a0035f4063bf08c3e978afe1d4677619add43d869108e0c0a9822a150",
+      "source_raw_response_sha256": "39caf9151fc5044627edb9b360ab9b4aaf556e27e36d511c3feae501b64109eb",
+      "native_state_sha256": "063c31596673e78eecfa32fb1eabd3baf9382ae596cb2fc2f20ddd4d048cf214",
+      "native_spec_sha256": "0ee8815ac3c50d6b694736f791f60defb475826f164705cfe30b1c670f4081d4",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 6.005,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1085,
+        "completion_tokens": 636,
+        "total_tokens": 1721,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "rb3eb06d90d68efb9",
+      "assistant_text_sha256": "61916fd4862f9812cc5426c52a1a4519d3dcd496f7c2cc42e114bb06479a82e3",
+      "source_raw_response_sha256": "214b8bbaafafc1e82296deab0bb67e0df8f4d6e70e8076ac32b0935ab9a56a99",
+      "native_state_sha256": "f32d8b11a46bbeda9bae76a40b7e9465919adaae2cd58742d550199b691536d8",
+      "native_spec_sha256": "330a4ca0f91981272d8a6184121ec3c587ac995d640708c1fd58c42fe4fb5490",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.612,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 587,
+        "total_tokens": 1645,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "rad3b022b8086adf8",
+      "assistant_text_sha256": "0cf49620fcce9e3ff16c9f45b76d0900d8356e40330f20e2e8c5e45688223ba2",
+      "source_raw_response_sha256": "273f7f4271505f0970c1d3c24462635d3bc363d1b661c85d6934a32668eb48c2",
+      "native_state_sha256": "d478018ac07630ce771dc101d8e77d130b2ac87170e5da16be9a8d5759894660",
+      "native_spec_sha256": "9babcfa5d42fa735de84ceaa13714130d0e27bfd3653a63ec0b85da31b7b13a3",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 6.077,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 656,
+        "total_tokens": 1714,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "rb4f160c1d309f6a0",
+      "assistant_text_sha256": "85c3500600da01a245ee49b043b4ddd0936b447680e69445228a17d8a02cdd63",
+      "source_raw_response_sha256": "b4d809f61b607287bab56fa01e28f491e237da175fe813a534df96cb88f8944e",
+      "native_state_sha256": "eda355a8e03f06545241ee2db13113ed4d085cd458e6fd1e189c464a7206ef12",
+      "native_spec_sha256": "866363faaf0c65fdec56385db8f441aed4d2aa265df1fe86679e51aa04b8e546",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.915,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1085,
+        "completion_tokens": 614,
+        "total_tokens": 1699,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "rfa70e7bd01dd05f3",
+      "assistant_text_sha256": "78300c8298969502a29985c0c3e5cd07420285653a4bbbb9b5624433b7f886ae",
+      "source_raw_response_sha256": "d65f45a85722ded2b02ec8a7766393bd9776824005b7073a45c5c6619b812fff",
+      "native_state_sha256": "a70e503963803ffca046e0f91e7c176f4083f88574294a9ec28bce48eb32bf26",
+      "native_spec_sha256": "59aed4025bb41cc70647fc58728ac33a5e0de245a2ccc725d6ba92d5c2ae6109",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.576,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 589,
+        "total_tokens": 1647,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r8dbd603d27292783",
+      "assistant_text_sha256": "880c175879b982a2ad0ce733eec5e61a7dbf078496305e8437ecc3e31ff563b3",
+      "source_raw_response_sha256": "428f69b2c0318e42f48672c20c8644de7dc1f9e5371ab3419655bc128f99952f",
+      "native_state_sha256": "25d213a5c56658d067f414ae4417237bb8904354d70d2a55d78959537ba7d2d0",
+      "native_spec_sha256": "b2df4eda485f57ad5449a3bc114fe77143bf7f38fcb63af3d0cebea5e98c997d",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.757,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1085,
+        "completion_tokens": 590,
+        "total_tokens": 1675,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r0a4615198e5421d2",
+      "assistant_text_sha256": "f97974ac8659bc13233b1384b1f9e41cc4800fcf51077d7e3b375052287eb2c3",
+      "source_raw_response_sha256": "46d2f1e804d73d7c41e4c56b97f59738c4cf9f6ebbb1c0063a3ab1d5fa9bbd08",
+      "native_state_sha256": "378cbe6baa3bea57b47fe451162b9fdfc69f0199566678998a68bb8be7a08806",
+      "native_spec_sha256": "a197481ffe2442289f8858223349e13f92023fd3148b9df35050afd184257581",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 6.166,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 648,
+        "total_tokens": 1706,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r085734d964a171a4",
+      "assistant_text_sha256": "ed2a3244675d1339ee51a9bd34f3b7d510065df461f51b9ec3e3ff8dfd624474",
+      "source_raw_response_sha256": "93cc19fc0861b874da7818da471065b6da0a519fd117ad75be54f4cbdf613859",
+      "native_state_sha256": "13ebf0821dab74c1314bee25f84dd5daae740706a01cd16f7b1cffcde9989f95",
+      "native_spec_sha256": "0bef43cc9520a725904edefee69a670a9329e5fcfe3045b9808cdcc37aa57c05",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 6.225,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1085,
+        "completion_tokens": 658,
+        "total_tokens": 1743,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "re46c7094dc3a63ce",
+      "assistant_text_sha256": "9dfda1197ea50536801492b38e7da3eff4a876e609fa8e7e9c47ac207bcade7e",
+      "source_raw_response_sha256": "4d81a338ab26a9c2f988738b6e72c3ae2e63b51f61b710cbfe1444dd7b80708f",
+      "native_state_sha256": "931cbbd32ed040573b587e2f1adab0c29ed8859f8f4df992c1b5c223893019f5",
+      "native_spec_sha256": "9c8cc19321edf8c6bdc34fbe4d3ffbe1ed96612886cebd0fb91a0ecbc97b9788",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.842,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 613,
+        "total_tokens": 1671,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "rbd34a30f0a04a773",
+      "assistant_text_sha256": "40faf3e32f87d85fe6539bf8ff5e5ec39e237473b05de2cfdea55fe69996163f",
+      "source_raw_response_sha256": "03ebaa09382302884d844579b124d10f909d5291d212e4d9855001cff3a7e0b6",
+      "native_state_sha256": "1898987bc5f78e2b1d75d5528a0b7c0e8c1c799daaecaf9bfda4f6d1c20b0731",
+      "native_spec_sha256": "74ce171ce334c8601a009132499e19038a8dc1018ac7a4478c812b42187ecfae",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.83,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 613,
+        "total_tokens": 1671,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "rcff37060d0c588e6",
+      "assistant_text_sha256": "463ec5cd0a560771d8acbfc48e2df2057c4bf4052edf98da3bf13178b2216097",
+      "source_raw_response_sha256": "1b83ea995e6b7fe764cfd51ab80481853b9dd14c0f959c7471d86e89636accdf",
+      "native_state_sha256": "0a972925f3bf31ae44153485e46a5f2b33d0c4a711f7aa9165ab01c12453cca6",
+      "native_spec_sha256": "4fff4d837099ad96a91370fc19bc92a3c763ec5436fada6e57253d154a8058e7",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.531,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1085,
+        "completion_tokens": 585,
+        "total_tokens": 1670,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r8d62ac8fa64d3ca3",
+      "assistant_text_sha256": "40faf3e32f87d85fe6539bf8ff5e5ec39e237473b05de2cfdea55fe69996163f",
+      "source_raw_response_sha256": "bd2450d333d76c9df68515ccaee08eb1d894222b3d3b230aaa4b79015ccfe626",
+      "native_state_sha256": "718cac2206f9b7044c5b9be784a779d032eca28488aa58632ae1f73bbe9cec5d",
+      "native_spec_sha256": "c1663148a9fa4501345698e8a7715235a5eeef21ddc7384babf568b21e1d1286",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.827,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1085,
+        "completion_tokens": 613,
+        "total_tokens": 1698,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "rbe69f97969d07ccc",
+      "assistant_text_sha256": "8e2112188f54e5862bc52480b516d6a796c557efe6434283cf29284528147248",
+      "source_raw_response_sha256": "f32a96aa995a529b194af0ee90d7fb01307203a8d66a97feff568c701c5f0632",
+      "native_state_sha256": "bc6fcdc0c81b2e4314f24a4963b7c7ecc8ab3272e752e8dc013cfd01326af15c",
+      "native_spec_sha256": "7e0282af4dbee0d873015e57adcff144525f5ca789dd834b767feaa455a81cee",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.825,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1085,
+        "completion_tokens": 613,
+        "total_tokens": 1698,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "rca3030fe3b4a7833",
+      "assistant_text_sha256": "9c48666222f73a840db876f9e88dc76bb2eb67b810de0cc716c65971208a3e2c",
+      "source_raw_response_sha256": "3873190b6d5e2467eadfa2df54d8ee4ba5bb5b7e633488d55b1c2a21b9fdcfe9",
+      "native_state_sha256": "03739686efdf35de126f65c53b2ba02ac5c1d03f6361b1adec2139fa732006d6",
+      "native_spec_sha256": "bbe8520e0ff5834da70f351dbaf7ddcaf4ca315aff2980c512708021daf4f637",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 6.106,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 616,
+        "total_tokens": 1674,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r48ddb51fb1544067",
+      "assistant_text_sha256": "80ae49c112ee4d43cc0b68b8c4c5145397e996bf69c2fd8e6b67d4d9a1e9f661",
+      "source_raw_response_sha256": "4cbcf6fb9adbfe9bde13ca67d79ec178e8ffda1ca399053443f18e0b565b9c44",
+      "native_state_sha256": "b0ee4c542de18a251cd07a4e51987b65de564b1b0d5c60cdd59854052caebe6f",
+      "native_spec_sha256": "bcf5e125e84c04005872f178c76f9040f81c6546642313bfd460a22052002fca",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 6.013,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 629,
+        "total_tokens": 1687,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r9abb24203a00c0b7",
+      "assistant_text_sha256": "6936a80e357a76d58926560a218b31b2df5bff9dcd378332e0196dcf162efaae",
+      "source_raw_response_sha256": "083b3715f9b47d4ad66a84d98d13d27fa0a81c69b2fbdaf9c7c27446c4c07ca4",
+      "native_state_sha256": "fa73ca332c815989192744aeee280fd8daf312b8ad9f509a58d102548e446f4a",
+      "native_spec_sha256": "ae89ee00235ad931f2f2e01f6e267ab0a63262607ac8a8faff065ccb17a801d7",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.613,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1085,
+        "completion_tokens": 589,
+        "total_tokens": 1674,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r40385c5a38db292f",
+      "assistant_text_sha256": "6936a80e357a76d58926560a218b31b2df5bff9dcd378332e0196dcf162efaae",
+      "source_raw_response_sha256": "550cf55099a32637bb3865301d1f846437be0584a2d86f03d18f798b20328b3f",
+      "native_state_sha256": "a8c38b90576e85a58cd9b60b8dcb522358f028220f5170ae15b42d23d3d77d38",
+      "native_spec_sha256": "e9e81a9e1a39cef4a4fb6ebb0dae75ccb7fabcd99ef7c15d7e770b3c572086fb",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.641,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 589,
+        "total_tokens": 1647,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r129d0163c458a091",
+      "assistant_text_sha256": "08f7b524ad9f21df24eac1f20baa2725ddef748eb797acae07ffe4056a0a3ec6",
+      "source_raw_response_sha256": "13d7b13ccd8285d48fd87310de6d1b0bfb2d1a48922865603daa17fdb2a5d0a6",
+      "native_state_sha256": "af8bf83e4fca5926963019949f7b7b3b7bf321999de595b6734d4f6eb7fba849",
+      "native_spec_sha256": "cc995234fd6af31ed0a1f08828ae77e268905ba2b6adf3bb530ca51f3793a4d1",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.749,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 620,
+        "total_tokens": 1678,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r373f8ebd7bfe4a93",
+      "assistant_text_sha256": "61916fd4862f9812cc5426c52a1a4519d3dcd496f7c2cc42e114bb06479a82e3",
+      "source_raw_response_sha256": "9ffd931ca1380429edd2ba7b43f81ee6ffd87fe8bbf22d384f0af85c056007c9",
+      "native_state_sha256": "36e7f040453909bf60416e5a094a1eb6b07c12d83c97e3209457a7da30a49c27",
+      "native_spec_sha256": "cfb26d4f8252be1fca682b5d6ba033a917aa12dcaa135baab5730cd00b58e809",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.605,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 587,
+        "total_tokens": 1645,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r4126bcd142d69d3c",
+      "assistant_text_sha256": "ed2a3244675d1339ee51a9bd34f3b7d510065df461f51b9ec3e3ff8dfd624474",
+      "source_raw_response_sha256": "85f3ebfabc3f26cba3ddc8704ef7d5283fcf5d6d03297b7ad741952cbf6e6f7b",
+      "native_state_sha256": "8cadd95b33bd2a9d338c857b34c1561f39265bcf4d973bd3b426e44c78744ade",
+      "native_spec_sha256": "0aa779fcf48583d825004bfc2f17ca2099eff0b4e0154c8825f224c64e2e53ba",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 6.201,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 658,
+        "total_tokens": 1716,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r9c418e199d41d80d",
+      "assistant_text_sha256": "a51903a2a4d1cb6490d401a89f42e7160c4abd9685a022b2154bf854b2168ae1",
+      "source_raw_response_sha256": "e06a792750165718a0d9d96cb2b1e6d76be36f80752851cf22b3be069924f79b",
+      "native_state_sha256": "0b7c11efe46c2812c2e971357f8eb2d35287d58e493a45d3c0ea28b4c5154baf",
+      "native_spec_sha256": "b0beb2013c8499e71c9bc693f11577ed114c9319a53ae28c94369aaebee37d7b",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 6.158,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1085,
+        "completion_tokens": 646,
+        "total_tokens": 1731,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r9da5173435687ee8",
+      "assistant_text_sha256": "9c48666222f73a840db876f9e88dc76bb2eb67b810de0cc716c65971208a3e2c",
+      "source_raw_response_sha256": "e568f5f1689685641a5338de1fd3a38ca987f33dab4d418de1e8062482c266a4",
+      "native_state_sha256": "c90c193612f36a70fec1eaf356cba51bb475ae6455b24feec05cc02d56ed5a53",
+      "native_spec_sha256": "b22bfb3ea5f2251bb8f0c4febcb5dc9dad080cc30b4e990fe4fb44b63097fd82",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.859,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 616,
+        "total_tokens": 1674,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r7aeb3cb1ed4b80f2",
+      "assistant_text_sha256": "2511cfdaee8ca2c102636017de5f41c759469b04fc40c02855337a8bbbba4e1e",
+      "source_raw_response_sha256": "22411d98a1750fe5357080b0b3a8bb971af171d03cd204b6ff17e78724a0e2e4",
+      "native_state_sha256": "4623a37a84e47fcf7fa66228c45eb2c1fc2b4509d81aad808650970a5cba6721",
+      "native_spec_sha256": "847300741d6f625beb20b1169e17ca1a5255bd7af24a055dfd860db78b8d1540",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 6.012,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 630,
+        "total_tokens": 1688,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "rab45f4ac936b8520",
+      "assistant_text_sha256": "80ae49c112ee4d43cc0b68b8c4c5145397e996bf69c2fd8e6b67d4d9a1e9f661",
+      "source_raw_response_sha256": "23eb977de3dfe675d9cbcbbec67d164772aeaabcddcda2b57ddcff943decac3a",
+      "native_state_sha256": "50f1f9fc0add7cc7639c0dfac65f9bf3d8e2b5503b1dd3140cbde36b4d161e1e",
+      "native_spec_sha256": "0db2e927997adc1a322be455e2791a8b8ba00c5a6758fac3d8deb8dccafaeb44",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.879,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 629,
+        "total_tokens": 1687,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r00b3d162e34551cb",
+      "assistant_text_sha256": "bf3b6f2ad66996e67f1f11c1d1a77cb5ad509a09cde7c908eb31b4feb4dfaec7",
+      "source_raw_response_sha256": "1d9698ae962a79ec38d6cdcb30ebfc526df40833cc31f4ad74b588d3682b4848",
+      "native_state_sha256": "f6c6ad8bb4841f51e3e886b192a0bb1a6c81cf110042ae73d411782484c2f4af",
+      "native_spec_sha256": "db1cca7969ffb8b976e201099a17ad6c9ce381a4fd0e1c2e53de802ed349a206",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 6.163,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 658,
+        "total_tokens": 1716,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r87ff750abdd9628e",
+      "assistant_text_sha256": "ed2a3244675d1339ee51a9bd34f3b7d510065df461f51b9ec3e3ff8dfd624474",
+      "source_raw_response_sha256": "c17c1fbc9b6abf65a58d85e082ec022ba24ee75492abf1362e370b28aab56431",
+      "native_state_sha256": "1653b185945e5f2aeaf346bc7e14405e33c21dda009e1368b21fd5d949e2f6f2",
+      "native_spec_sha256": "ec3f88cf3f26f4469249300135d25b71de33df4f9761531e63a28885007d6b20",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 6.24,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 658,
+        "total_tokens": 1716,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r893c3e853dfc1de6",
+      "assistant_text_sha256": "2511cfdaee8ca2c102636017de5f41c759469b04fc40c02855337a8bbbba4e1e",
+      "source_raw_response_sha256": "3465589339bdf0c5ddfe1e408bc09869f972aff8efc5768f8aaca5eac14fb3ee",
+      "native_state_sha256": "850a45e79dd7b14be2659de9cb564886fe45a992ba5c38f718d229fd4630ddb3",
+      "native_spec_sha256": "9fefb0b257e37ebb19832943c9b13fbf794c097d83227227718cadee2af147c4",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.922,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 630,
+        "total_tokens": 1688,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "rf82db3f7c2b93477",
+      "assistant_text_sha256": "0cf49620fcce9e3ff16c9f45b76d0900d8356e40330f20e2e8c5e45688223ba2",
+      "source_raw_response_sha256": "84c91ae0d591858a4a6bd589a45255675dbe9f91bc1df61f8990cd10684aa5fb",
+      "native_state_sha256": "aef59c1f8b05da95e328efa2628cbeabfe605c9f043f0fda20fed1162f88c3d3",
+      "native_spec_sha256": "932d6e28de745442364c173f0f7fb64b46e4ac2d713a92af470a4e0eb24d34d4",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 6.17,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1085,
+        "completion_tokens": 656,
+        "total_tokens": 1741,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    {
+      "request_id": "r89066999fc783a55",
+      "assistant_text_sha256": "65800bf1567a2c0d152b53d7ed8a5bdb9e77dd6b6d93f6b038e337dfd9d423f3",
+      "source_raw_response_sha256": "5e02bc6c47449f4f13b0dd5b8f733031d2f978e550698e5d7cf8254053e65a26",
+      "native_state_sha256": "2787f354daa8e8541193b330ee0e95d570d1e2518c75822c9297ef7bf92421a0",
+      "native_spec_sha256": "3417b307cc02637c1cdbad6741688fce7d74b0c701785e6a6f4382d5f0218c75",
+      "outcome": "response",
+      "finish_reason": "stop",
+      "elapsed_s": 5.984,
+      "reported_model": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 640,
+        "total_tokens": 1698,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    }
+  ]
+}

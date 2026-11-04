@@ -1,0 +1,16 @@
+test_all_single_status_mutations_and_note_omissions_detected (__main__.SimulationTests.test_all_single_status_mutations_and_note_omissions_detected) ... ok
+test_blank_is_not_available_and_critical_flip (__main__.SimulationTests.test_blank_is_not_available_and_critical_flip) ... ok
+test_cluster_intervals_and_pairing_extremes (__main__.SimulationTests.test_cluster_intervals_and_pairing_extremes) ... ok
+test_duplicate_keys_nonfinite_fences_and_huge_response (__main__.SimulationTests.test_duplicate_keys_nonfinite_fences_and_huge_response) ... ok
+test_failed_missing_truncated_unknown_finish_have_no_safe_zero_claim (__main__.SimulationTests.test_failed_missing_truncated_unknown_finish_have_no_safe_zero_claim) ... ok
+test_frozen_file_tampering_refused (__main__.SimulationTests.test_frozen_file_tampering_refused) ... ok
+test_impossible_date_missing_date_and_bad_status_rejected (__main__.SimulationTests.test_impossible_date_missing_date_and_bad_status_rejected) ... ok
+test_month_lengths_and_required_content (__main__.SimulationTests.test_month_lengths_and_required_content) ... ok
+test_strict_notes_case_spaces_global_order (__main__.SimulationTests.test_strict_notes_case_spaces_global_order) ... ok
+test_unknown_duplicate_observations_refused (__main__.SimulationTests.test_unknown_duplicate_observations_refused) ... ok
+test_wrong_valid_month_is_failure (__main__.SimulationTests.test_wrong_valid_month_is_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.086s
+
+OK

@@ -1,0 +1,129 @@
+{
+  "month": "2027-04",
+  "days": {
+    "2027-04-01": {
+      "status": "UNAVAILABLE",
+      "note": "swap OK"
+    },
+    "2027-04-02": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2027-04-03": {
+      "status": "PM",
+      "note": ""
+    },
+    "2027-04-04": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2027-04-05": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2027-04-06": {
+      "status": "PM",
+      "note": ""
+    },
+    "2027-04-07": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2027-04-08": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2027-04-09": {
+      "status": "PM",
+      "note": ""
+    },
+    "2027-04-10": {
+      "status": "PM",
+      "note": "float OK"
+    },
+    "2027-04-11": {
+      "status": "AM",
+      "note": ""
+    },
+    "2027-04-12": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2027-04-13": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2027-04-14": {
+      "status": "UNAVAILABLE",
+      "note": "training"
+    },
+    "2027-04-15": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2027-04-16": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2027-04-17": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2027-04-18": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2027-04-19": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2027-04-20": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2027-04-21": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2027-04-22": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2027-04-23": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2027-04-24": {
+      "status": "AM",
+      "note": ""
+    },
+    "2027-04-25": {
+      "status": "AM",
+      "note": "no overtime"
+    },
+    "2027-04-26": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2027-04-27": {
+      "status": "NOT_SPECIFIED",
+      "note": "early out"
+    },
+    "2027-04-28": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2027-04-29": {
+      "status": "AM",
+      "note": ""
+    },
+    "2027-04-30": {
+      "status": "NIGHT",
+      "note": ""
+    }
+  },
+  "global_notes": [
+    "Training pending",
+    "Ask before swapping"
+  ]
+}

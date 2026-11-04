@@ -1,0 +1,279 @@
+{
+  "status": "PASS",
+  "same_environment_frozen_file_matches": 67,
+  "images_byte_identical": 36,
+  "gold_calendars_identical": 12,
+  "request_order_identical": true,
+  "freeze_timestamp_excluded": true,
+  "scope": "same local Python/Pillow/FreeType environment; no cross-platform pixel identity claim",
+  "files": [
+    {
+      "path": "INPUT-CONTRACT.md",
+      "match": true
+    },
+    {
+      "path": "PLAN.md",
+      "match": true
+    },
+    {
+      "path": "PROMPT.txt",
+      "match": true
+    },
+    {
+      "path": "assets/fonts/caveat/Caveat[wght].ttf",
+      "match": true
+    },
+    {
+      "path": "assets/fonts/caveat/OFL.txt",
+      "match": true
+    },
+    {
+      "path": "assets/fonts/dejavu/DejaVuSans.ttf",
+      "match": true
+    },
+    {
+      "path": "assets/fonts/dejavu/LICENSE_DEJAVU",
+      "match": true
+    },
+    {
+      "path": "assets/fonts/handlee/Handlee-Regular.ttf",
+      "match": true
+    },
+    {
+      "path": "assets/fonts/handlee/OFL.txt",
+      "match": true
+    },
+    {
+      "path": "assets/fonts/kalam/Kalam-Regular.ttf",
+      "match": true
+    },
+    {
+      "path": "assets/fonts/kalam/OFL.txt",
+      "match": true
+    },
+    {
+      "path": "assets/fonts/patrickhand/OFL.txt",
+      "match": true
+    },
+    {
+      "path": "assets/fonts/patrickhand/PatrickHand-Regular.ttf",
+      "match": true
+    },
+    {
+      "path": "build_simulation.py",
+      "match": true
+    },
+    {
+      "path": "fonts.json",
+      "match": true
+    },
+    {
+      "path": "gold/C01.json",
+      "match": true
+    },
+    {
+      "path": "gold/C02.json",
+      "match": true
+    },
+    {
+      "path": "gold/C03.json",
+      "match": true
+    },
+    {
+      "path": "gold/C04.json",
+      "match": true
+    },
+    {
+      "path": "gold/C05.json",
+      "match": true
+    },
+    {
+      "path": "gold/C06.json",
+      "match": true
+    },
+    {
+      "path": "gold/C07.json",
+      "match": true
+    },
+    {
+      "path": "gold/C08.json",
+      "match": true
+    },
+    {
+      "path": "gold/C09.json",
+      "match": true
+    },
+    {
+      "path": "gold/C10.json",
+      "match": true
+    },
+    {
+      "path": "gold/C11.json",
+      "match": true
+    },
+    {
+      "path": "gold/C12.json",
+      "match": true
+    },
+    {
+      "path": "images/r00b3d162e34551cb.png",
+      "match": true
+    },
+    {
+      "path": "images/r085734d964a171a4.png",
+      "match": true
+    },
+    {
+      "path": "images/r0a4615198e5421d2.png",
+      "match": true
+    },
+    {
+      "path": "images/r129d0163c458a091.png",
+      "match": true
+    },
+    {
+      "path": "images/r23582fdad6756161.png",
+      "match": true
+    },
+    {
+      "path": "images/r354327fdf0ccb69d.png",
+      "match": true
+    },
+    {
+      "path": "images/r373f8ebd7bfe4a93.png",
+      "match": true
+    },
+    {
+      "path": "images/r40385c5a38db292f.png",
+      "match": true
+    },
+    {
+      "path": "images/r4126bcd142d69d3c.png",
+      "match": true
+    },
+    {
+      "path": "images/r48ddb51fb1544067.png",
+      "match": true
+    },
+    {
+      "path": "images/r4b8cbedc2f296132.png",
+      "match": true
+    },
+    {
+      "path": "images/r544a6f194b3f8331.png",
+      "match": true
+    },
+    {
+      "path": "images/r732ff042c44a31b5.png",
+      "match": true
+    },
+    {
+      "path": "images/r7aeb3cb1ed4b80f2.png",
+      "match": true
+    },
+    {
+      "path": "images/r87ff750abdd9628e.png",
+      "match": true
+    },
+    {
+      "path": "images/r89066999fc783a55.png",
+      "match": true
+    },
+    {
+      "path": "images/r893c3e853dfc1de6.png",
+      "match": true
+    },
+    {
+      "path": "images/r8d62ac8fa64d3ca3.png",
+      "match": true
+    },
+    {
+      "path": "images/r8dbd603d27292783.png",
+      "match": true
+    },
+    {
+      "path": "images/r9abb24203a00c0b7.png",
+      "match": true
+    },
+    {
+      "path": "images/r9c418e199d41d80d.png",
+      "match": true
+    },
+    {
+      "path": "images/r9da5173435687ee8.png",
+      "match": true
+    },
+    {
+      "path": "images/rab45f4ac936b8520.png",
+      "match": true
+    },
+    {
+      "path": "images/rad3b022b8086adf8.png",
+      "match": true
+    },
+    {
+      "path": "images/rb3eb06d90d68efb9.png",
+      "match": true
+    },
+    {
+      "path": "images/rb4f160c1d309f6a0.png",
+      "match": true
+    },
+    {
+      "path": "images/rbd34a30f0a04a773.png",
+      "match": true
+    },
+    {
+      "path": "images/rbe69f97969d07ccc.png",
+      "match": true
+    },
+    {
+      "path": "images/rca3030fe3b4a7833.png",
+      "match": true
+    },
+    {
+      "path": "images/rcff37060d0c588e6.png",
+      "match": true
+    },
+    {
+      "path": "images/rdabd35ebf3e8c919.png",
+      "match": true
+    },
+    {
+      "path": "images/re46c7094dc3a63ce.png",
+      "match": true
+    },
+    {
+      "path": "images/re65f90ee921097a0.png",
+      "match": true
+    },
+    {
+      "path": "images/re706c5a3164fde64.png",
+      "match": true
+    },
+    {
+      "path": "images/rf82db3f7c2b93477.png",
+      "match": true
+    },
+    {
+      "path": "images/rfa70e7bd01dd05f3.png",
+      "match": true
+    },
+    {
+      "path": "manifest.json",
+      "match": true
+    },
+    {
+      "path": "requests.json",
+      "match": true
+    },
+    {
+      "path": "score_simulation.py",
+      "match": true
+    },
+    {
+      "path": "test_simulation.py",
+      "match": true
+    }
+  ]
+}

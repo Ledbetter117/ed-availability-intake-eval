@@ -1,27 +1,22 @@
-# Software release and study status
+# Simulation edition and preserved historical study
 
-The software, technical report and subsequent security corrections are public. See the [release history](https://github.com/Ledbetter117/ed-availability-intake-eval/releases) for the exact source revision of each edition and the [security review](SECURITY-REVIEW.md) for repair evidence. The historical synthetic evaluation is preserved. The two photograph probes and the full original study remain unfinished.
+The 2026-11-03 scope amendment authorizes a complete simulation deliverable using fictional calendars, handwriting-style fonts and actual model observations. It defines completion by the finite frozen design, recorded outcomes including failures, tested scoring, report and reproducible artifacts. Good model performance is not a completion requirement.
+
+The completed local-model simulation collected 36/36 first observations. Strict exact-calendar recovery was 4/12 typed, 3/12 handwriting-font, and 3/12 degraded-handwriting calendars. Release history identifies the source revision and tag for this edition.
 
 | Work | State and evidence |
 |---|---|
-| Historical synthetic evaluation | Saved observations for the two recorded model labels; aggregate counts recomputed from public records and historical response scoring checked privately. No new model inference. |
-| Correction payload | The existing metric and denominator corrections are retained. The original `v1.0.0` tag is preserved by repository history. |
-| Local authentication | Selected environment-variable credentials supported for OpenAI-compatible loopback endpoints; missing credentials refuse dispatch. Tests use temporary synthetic servers. No real Studio model call is claimed. |
-| Credential reflection | Explicit credentials, including short values, are scrubbed from errors. Reflected credentials in successful JSON are redacted, recorded as malformed/unavailable, and excluded from scoring. |
-| Installed wrapper integrity | A mismatch refuses execution; a change during execution fails the result. This is an accidental-drift check, not a digital signature. |
-| Arm A and Arm B tooling | Integrated and checked with synthetic cases. Original study goals are preserved. No real-photo result is present. |
-| Amendment 01 | Adopted document-level rules and local-photo ruling. Its earlier heading falsely implied September publication; the corrected heading directs readers to actual repository history. |
-| Amendment 02 | Draft only. The exact local arm, feasibility rule, baseline, and outstanding interpretation choices are not treated as frozen. |
-| Publication | Source and technical report are published; released editions are identified by their immutable source revision and tag. Later changes on the default branch are distinguished from an earlier release. |
+| Paired simulation | Twelve latent calendars × three matched rendering conditions; all 28/29/30/31-day month lengths; four licensed handwriting fonts. Frozen dataset, truth and prompt in [simulation](../simulation/README.md). |
+| Simulation inference and scoring | The [study report](SIMULATION-STUDY.md) states first-observation coverage, errors and descriptive paired estimates from actual Orca controller model execution. Software oracle controls are excluded from model results. |
+| Original human photograph/intent study | Preserved as future work outside the current simulation edition. No claim of real handwriting, authored intent, phone capture or clinical safety is made. Original protocols, draft amendments and earlier findings remain available. |
+| Historical synthetic evaluation | Saved earlier observations and corrected aggregate records remain separate. Exact saved model labels are not newly authenticated by the simulation run. |
+| Software and security repairs | Reviewed existing source and its credential, parser, path and response checks are retained. See [security review](SECURITY-REVIEW.md), [security policy](../SECURITY.md) and previous release tags. |
+| Publication and communication | The report, source, synthetic data, licenses and sanitized execution evidence are the release artifacts. LinkedIn text is a prepared draft, not a sent post. |
 
-## Remaining empirical inputs
+## Interpretation boundary
 
-The checked project has blank Arm A author-intent sheets and behavior/timing rows, no Arm A photo directory, and blank Arm B status/default answers. No probe result or original completion-audit artifact was found within the checked Professional Development and ED Evaluation project trees. This is a search boundary, not a claim that no copy exists elsewhere.
-
-Existing Arm B documents and inferred legends do not establish what the author intended. Copyist and synthetic reference data can be generated; private intended meanings and elapsed authoring time cannot be invented. If completed materials exist elsewhere, they can be reconciled without restarting the project.
-
-The local feasibility evaluation also remains unrun in this repair. It needs a verified available image-capable local model under the machine owner's live resource check. This release neither starts a service nor downloads or loads model weights.
+Font-generated marks are a disclosed proxy for a rendering challenge. They cannot establish how a person writes, what a real author intended, or whether a schedule is safe. The original human study would require its own genuine evidence and authorization. That separate future work does not make the authorized simulation deliverable incomplete.
 
 ## Package boundary
 
-The public export includes source, tests, generated data, historical aggregate records, protocol drafts, the technical report and public review summaries. It excludes actual photos, private mappings, real intent/gold files, raw historical responses, local run folders, credential values and private review records. The LinkedIn text is a draft; no post was sent.
+The new public simulation package contains fictional calendars and gold, image-only requests, actual response text, sanitized execution metadata, source, tests, licenses, report and numerical provenance. Hostnames, absolute workstation paths, credentials, owner-state files and private coordination records are excluded. Raw model text is not silently rewritten; a hash binds each public text to its saved original. Earlier private human-study material remains excluded.

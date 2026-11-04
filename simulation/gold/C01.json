@@ -1,0 +1,133 @@
+{
+  "month": "2028-05",
+  "days": {
+    "2028-05-01": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2028-05-02": {
+      "status": "AM",
+      "note": ""
+    },
+    "2028-05-03": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2028-05-04": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2028-05-05": {
+      "status": "PM",
+      "note": ""
+    },
+    "2028-05-06": {
+      "status": "AM",
+      "note": "no overtime"
+    },
+    "2028-05-07": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2028-05-08": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2028-05-09": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2028-05-10": {
+      "status": "AM",
+      "note": ""
+    },
+    "2028-05-11": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2028-05-12": {
+      "status": "AM",
+      "note": ""
+    },
+    "2028-05-13": {
+      "status": "AM",
+      "note": ""
+    },
+    "2028-05-14": {
+      "status": "AM",
+      "note": ""
+    },
+    "2028-05-15": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2028-05-16": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2028-05-17": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2028-05-18": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2028-05-19": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2028-05-20": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2028-05-21": {
+      "status": "PM",
+      "note": "after 10"
+    },
+    "2028-05-22": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2028-05-23": {
+      "status": "AVAILABLE",
+      "note": "no call"
+    },
+    "2028-05-24": {
+      "status": "AM",
+      "note": ""
+    },
+    "2028-05-25": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2028-05-26": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2028-05-27": {
+      "status": "AM",
+      "note": "float OK"
+    },
+    "2028-05-28": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2028-05-29": {
+      "status": "PM",
+      "note": "swap OK"
+    },
+    "2028-05-30": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2028-05-31": {
+      "status": "PM",
+      "note": ""
+    }
+  },
+  "global_notes": [
+    "No extra call",
+    "Ask before swapping"
+  ]
+}

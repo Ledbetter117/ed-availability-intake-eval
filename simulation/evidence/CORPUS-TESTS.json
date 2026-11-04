@@ -1,0 +1,25 @@
+{
+  "freeze_sha256": "adc7f1ef7db8a3f5f94577617e4e4f666905d07584d5ef37eecc38cd1a59f519",
+  "unit_test_methods": 11,
+  "unit_result": "PASS",
+  "png_decodes": 36,
+  "unique_image_hashes": 36,
+  "month_length_counts": {
+    "31": 3,
+    "29": 3,
+    "28": 3,
+    "30": 3
+  },
+  "font_calendar_counts": {
+    "Patrick Hand": 3,
+    "Caveat": 3,
+    "Kalam": 3,
+    "Handlee": 3
+  },
+  "gold_day_total_per_condition": 354,
+  "request_fields_blind": true,
+  "oracle_end_to_end_control": "36/36 exact, not empirical observations",
+  "missing_observation_control": "0/36 observed, failures retained, no safe zero flip claim",
+  "actual_model_calls_by_producer": 0,
+  "status": "PASS"
+}

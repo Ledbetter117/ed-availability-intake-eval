@@ -1,7 +1,7 @@
 # ED Availability Intake — an LLM Extraction Eval
 A documented, synthetic-data evaluation of how accurately a vision LLM turns a filled-in staff-availability calendar into structured scheduling data. Clinical safety and deployment outcomes were not evaluated.
 
-![Python](https://img.shields.io/badge/Python-3.11%2B-blue) ![Data](https://img.shields.io/badge/benchmark%20data-100%25%20synthetic-green) ![License](https://img.shields.io/badge/license-MIT-lightgrey) ![Providers](https://img.shields.io/badge/runs%20on-Anthropic%20%7C%20OpenAI-orange)
+![Python](https://img.shields.io/badge/Python-3.11%2B-blue) ![Data](https://img.shields.io/badge/benchmark%20data-100%25%20synthetic-green) ![License](https://img.shields.io/badge/license-MIT-lightgrey) ![Simulation](https://img.shields.io/badge/simulation-local%20vision-orange)
 
 **Author:** Galen Coulter-Ledbetter, RN, Paramedic · working ED nurse · Paramedic licensure held in Florida · military medical education and readiness leadership · daily multi-EHR and clinical-AI user.
 
@@ -11,13 +11,20 @@ A documented, synthetic-data evaluation of how accurately a vision LLM turns a f
 
 ---
 
-## Current edition
+## Current simulation edition
 
-This edition repairs the evaluation software and prepares both original photograph-probe arms. It adds no new model-accuracy result. Historical model names below are the exact labels in saved records; provider execution identity was not independently authenticated during this repair.
+The 2026-11-03 scope amendment adds a finite, paired simulation study: twelve fictional calendars, each rendered as typed text, handwriting-font text and a degraded version of that same handwriting image. All four month lengths and four licensed handwriting fonts are included. Blank availability marks have an explicit NOT_SPECIFIED meaning. The plan, truth, prompt, scorer and image bytes were frozen before model calls.
 
-- [Technical report](paper/TECHNICAL-REPORT.md) · [PDF](paper/TECHNICAL-REPORT.pdf)
-- [Validation and limits](docs/VALIDATION.md) · [Release and study status](docs/RELEASE-STATUS.md)
-- [Numerical source map](docs/NUMERICAL-SOURCE-MAP.json) · [Photo-probe tooling](probe/README.md)
+The completed local-model simulation collected 36/36 first observations. Strict exact-calendar recovery was 4/12 typed, 3/12 handwriting-font, and 3/12 degraded-handwriting calendars. The simulation edition has its own completion scope. The preserved original human photograph/intent study is future work outside this edition; generated fonts do not stand in for human-study evidence.
+
+- [Simulation study and results](docs/SIMULATION-STUDY.md) · [Written report](paper/SIMULATION-PILOT.md) · [PDF](paper/SIMULATION-PILOT.pdf)
+- [Frozen simulation data and reproduction](simulation/README.md) · [Prospective plan](simulation/PLAN.md)
+- [Software release and study scope](docs/RELEASE-STATUS.md) · [Historical technical report](paper/TECHNICAL-REPORT.md)
+- [Historical numerical source map](docs/NUMERICAL-SOURCE-MAP.json) · [Simulation numerical sources](simulation/NUMERICAL-SOURCES.json)
+
+The current simulation schema uses AVAILABLE, AM, PM, NIGHT, UNAVAILABLE and NOT_SPECIFIED. A blank mark means NOT_SPECIFIED. Every true date is required, and notes are exact matches. See [the frozen prompt](simulation/PROMPT.txt) and [strict scorer](simulation/score_simulation.py). The older five-status schema and normalized-note metrics below describe the historical benchmark only.
+
+The historical model names below are the exact labels in saved records; provider execution identity was not independently authenticated during the earlier repair. Historical metrics and the new simulation use different designs and scoring rules and must not be pooled.
 
 ## Try the software without a model
 
@@ -63,7 +70,7 @@ Per-slice breakdowns: [`results/summary.md`](results/summary.md) (Sonnet) · [`r
 ## The asymmetric status error
 Not all misreads have the same meaning. Reading `AM` as `PM` changes a stated shift; reading **UNAVAILABLE as available** creates availability the person did not provide. If that error escaped human review and downstream scheduling checks, it could affect a schedule. This evaluation did not test that pathway or measure prevention and correction costs. The `UNAVAILABLE → available` flip is the evaluation's **critical-error rate**, reported separately from ordinary accuracy to expose this particular error. The earlier patient-safety framing was withdrawn because no clinical deployment or safety outcome was measured; see [`docs/CORRECTIONS.md`](docs/CORRECTIONS.md) §5.
 
-## The task under test
+## Historical extraction task and schema
 **Input:** an image of a filled-in monthly availability calendar.
 **Output:** structured JSON.
 
@@ -81,7 +88,7 @@ Not all misreads have the same meaning. Reading `AM` as `PM` changes a stated sh
 
 *Schema note:* the rendered calendars carry a synthetic employee ID as visual decoration. It is recorded in each gold file but never scored, so it is deliberately **not** in the required output schema. Stated here because silently dropping it would be the kind of drift an eval exists to catch.
 
-## Synthetic data with free ground truth (the design move)
+## Historical synthetic dataset
 `generate_dataset.py` *generates* each availability pattern first, then renders it to an image — so every calendar ships with its **exact** ground-truth JSON. No manual labeling and no real records — a staff availability calendar carries employment data, not patient data, and every calendar here is generated, and the whole 40-case dataset is **regenerable from a single seed** (`--seed 7`). *Byte-identical* output additionally requires the same Pillow/FreeType build — glyph rasterisation for the handwritten slice varies across versions and platforms — so `requirements.txt` pins Pillow and byte-identity is claimed only for a matching environment. Rendering conditions are varied in descriptive slices. Content changes with the condition, so slice differences cannot isolate a rendering effect:
 
 | Slice | What it simulates |
@@ -91,7 +98,7 @@ Not all misreads have the same meaning. Reading `AM` as `PM` changes a stated sh
 | `lowcontrast` | faint scan / poor lighting |
 | `handwritten` | pen-filled printed calendar — handwriting font, per-mark jitter, stroke-drawn check marks |
 
-## Metrics & rubric
+## Historical metrics and rubric
 Per case, then aggregated per slice and overall:
 1. **Day-level accuracy** — % of days with correct `status`.
 2. **Critical-error rate** *(headline)* — `UNAVAILABLE → available-of-any-kind` flips, per gold-UNAVAILABLE day.
@@ -100,7 +107,7 @@ Per case, then aggregated per slice and overall:
 5. **Format validity** — parsed, schema-conforming (exactly the prompt's fields, all days present, statuses in enum, notes as strings), counted over cases that produced a model answer. Since v1.2 an invalid response is **reported and not scored**: the other rates use scored cases only, and `summary.md` prints the invalid count. A provider error is counted separately and never as a model answer.
 6. **Robustness delta** — accuracy on `clean` minus each degraded slice.
 
-## How to run
+## Run the historical software
 Python 3.11+ with **Pillow** (`pip install -r requirements.txt`); matplotlib only for charts. Current dependencies include security fixes and differ from the historical rendering environment. Use the committed images for the historical benchmark; a new render is not claimed to be pixel-identical. Extraction never sees gold labels. Scoring never calls the API unless the optional `--judge` flag is set; no published result uses it, and when it is set the judge sees the gold note. Credentials are supplied through environment variables. The transports redact exact credential echoes and reject reflected successful responses before scoring. See [SECURITY.md](SECURITY.md) for the input and privacy boundaries.
 
 ```bash

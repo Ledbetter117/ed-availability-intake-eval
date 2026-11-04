@@ -1,0 +1,43 @@
+{
+  "typed": {
+    "name": "DejaVu Sans",
+    "path": "assets/fonts/dejavu/DejaVuSans.ttf",
+    "sha256": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
+    "license": "assets/fonts/dejavu/LICENSE_DEJAVU",
+    "source": "Matplotlib 3.11.2 distribution, mpl-data/fonts/ttf/DejaVuSans.ttf"
+  },
+  "handwriting": [
+    {
+      "name": "Patrick Hand",
+      "path": "assets/fonts/patrickhand/PatrickHand-Regular.ttf",
+      "sha256": "0f173b3e6cb6d1af25babf7f0057c5ac4ee11f9992b0469bb817e967ef4ad0fc",
+      "license": "assets/fonts/patrickhand/OFL.txt",
+      "source": "https://github.com/google/fonts/tree/2fe1e8c6b137fb13041a7cfca6fdcd8a910ea4dc/ofl/patrickhand",
+      "variation": "Regular"
+    },
+    {
+      "name": "Caveat",
+      "path": "assets/fonts/caveat/Caveat[wght].ttf",
+      "sha256": "0bdb6b660482d31531b3945849fba5916b3ef8695da7024a9e6b9ee3c4157988",
+      "license": "assets/fonts/caveat/OFL.txt",
+      "source": "https://github.com/google/fonts/tree/2fe1e8c6b137fb13041a7cfca6fdcd8a910ea4dc/ofl/caveat",
+      "variation": "default weight (400)"
+    },
+    {
+      "name": "Kalam",
+      "path": "assets/fonts/kalam/Kalam-Regular.ttf",
+      "sha256": "57cecb63d4608019371954274ae1d8c397764debd5b19d4a33c1efa4dc923c0b",
+      "license": "assets/fonts/kalam/OFL.txt",
+      "source": "https://github.com/google/fonts/tree/2fe1e8c6b137fb13041a7cfca6fdcd8a910ea4dc/ofl/kalam",
+      "variation": "Regular"
+    },
+    {
+      "name": "Handlee",
+      "path": "assets/fonts/handlee/Handlee-Regular.ttf",
+      "sha256": "7b99c0f291b5d52e06c66498a1d0dd6dff45a32e32d13be089c60d2d8dc00445",
+      "license": "assets/fonts/handlee/OFL.txt",
+      "source": "https://github.com/google/fonts/tree/2fe1e8c6b137fb13041a7cfca6fdcd8a910ea4dc/ofl/handlee",
+      "variation": "Regular"
+    }
+  ]
+}

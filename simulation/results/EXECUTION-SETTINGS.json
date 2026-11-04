@@ -1,0 +1,803 @@
+{
+  "records": [
+    {
+      "request_id": "r23582fdad6756161",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": "BF16",
+        "context_length": 32768,
+        "cache_type_kv": "q8_0",
+        "parallel_slots": 1,
+        "gpu_layers": -1,
+        "gpu_memory_mode": "auto",
+        "engine": "auto",
+        "speculative_type": "auto",
+        "spec_draft_n_max": null,
+        "reasoning_budget": -1
+      },
+      "vision_enabled": true,
+      "drafter": {
+        "spec_drafter_kind": "dflash",
+        "spec_fallback_reason": null
+      }
+    },
+    {
+      "request_id": "r4b8cbedc2f296132",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r544a6f194b3f8331",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "rdabd35ebf3e8c919",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "re706c5a3164fde64",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r354327fdf0ccb69d",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "re65f90ee921097a0",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r732ff042c44a31b5",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "rb3eb06d90d68efb9",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "rad3b022b8086adf8",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "rb4f160c1d309f6a0",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "rfa70e7bd01dd05f3",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r8dbd603d27292783",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r0a4615198e5421d2",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r085734d964a171a4",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "re46c7094dc3a63ce",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "rbd34a30f0a04a773",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "rcff37060d0c588e6",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r8d62ac8fa64d3ca3",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "rbe69f97969d07ccc",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "rca3030fe3b4a7833",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": "BF16",
+        "context_length": 32768,
+        "cache_type_kv": "q8_0",
+        "parallel_slots": 1,
+        "gpu_layers": -1,
+        "gpu_memory_mode": "auto",
+        "engine": "auto",
+        "speculative_type": "auto",
+        "spec_draft_n_max": null,
+        "reasoning_budget": -1
+      },
+      "vision_enabled": true,
+      "drafter": {
+        "spec_drafter_kind": "dflash",
+        "spec_fallback_reason": null
+      }
+    },
+    {
+      "request_id": "r48ddb51fb1544067",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r9abb24203a00c0b7",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r40385c5a38db292f",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r129d0163c458a091",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r373f8ebd7bfe4a93",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r4126bcd142d69d3c",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r9c418e199d41d80d",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r9da5173435687ee8",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r7aeb3cb1ed4b80f2",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "rab45f4ac936b8520",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r00b3d162e34551cb",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r87ff750abdd9628e",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r893c3e853dfc1de6",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "rf82db3f7c2b93477",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    },
+    {
+      "request_id": "r89066999fc783a55",
+      "requested_limits": {
+        "temperature": 0,
+        "max_output_tokens": 4096,
+        "timeout_seconds": 600
+      },
+      "effective_load": {
+        "gguf_variant": null,
+        "context_length": null,
+        "cache_type_kv": null,
+        "parallel_slots": null,
+        "gpu_layers": null,
+        "gpu_memory_mode": null,
+        "engine": null,
+        "speculative_type": null,
+        "spec_draft_n_max": null,
+        "reasoning_budget": null
+      },
+      "vision_enabled": true,
+      "drafter": null
+    }
+  ],
+  "limit": "Recorded native load and request metadata; response does not independently echo every sampler or identify engine build."
+}

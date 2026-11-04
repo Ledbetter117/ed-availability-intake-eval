@@ -6,6 +6,13 @@
       "sha256": "90fcbc6b8f5e1081a7a76910924c041a48e16af586c27fcef03588b52dc0a0cb",
       "reason": "Synthetic loopback user:secret fixture tests rejection of URL credentials; no usable secret or remote destination.",
       "expires": "2027-02-01"
+    },
+    {
+      "path": "simulation/results/paired-results.png",
+      "rule": "image_personal_metadata_candidate",
+      "sha256": "66451ef67cea9cac06644290cc48cea6e78622c01a11f70dcf1f4e84d3cf39f3",
+      "expires": "2027-02-01",
+      "reason": "Reviewed generated scientific Description contains only endpoint/interval caption text; no person, device location, or other private content. Pixel data and result evidence preserved."
     }
   ]
 }

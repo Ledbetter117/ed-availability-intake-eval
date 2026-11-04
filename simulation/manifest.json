@@ -1,0 +1,565 @@
+{
+  "schema": "ed-i-simulation/1",
+  "seed": 2026110301,
+  "base_commit": "e7d4f28c00b258ff0d9c421e9e696a11840652f8",
+  "calendar_count": 12,
+  "image_count": 36,
+  "calendars": [
+    {
+      "calendar_id": "C01",
+      "gold": "gold/C01.json",
+      "month": "2028-05",
+      "days": 31,
+      "font": "Patrick Hand"
+    },
+    {
+      "calendar_id": "C02",
+      "gold": "gold/C02.json",
+      "month": "2029-10",
+      "days": 31,
+      "font": "Caveat"
+    },
+    {
+      "calendar_id": "C03",
+      "gold": "gold/C03.json",
+      "month": "2028-02",
+      "days": 29,
+      "font": "Kalam"
+    },
+    {
+      "calendar_id": "C04",
+      "gold": "gold/C04.json",
+      "month": "2024-02",
+      "days": 29,
+      "font": "Handlee"
+    },
+    {
+      "calendar_id": "C05",
+      "gold": "gold/C05.json",
+      "month": "2027-02",
+      "days": 28,
+      "font": "Patrick Hand"
+    },
+    {
+      "calendar_id": "C06",
+      "gold": "gold/C06.json",
+      "month": "2026-08",
+      "days": 31,
+      "font": "Caveat"
+    },
+    {
+      "calendar_id": "C07",
+      "gold": "gold/C07.json",
+      "month": "2032-02",
+      "days": 29,
+      "font": "Kalam"
+    },
+    {
+      "calendar_id": "C08",
+      "gold": "gold/C08.json",
+      "month": "2029-02",
+      "days": 28,
+      "font": "Handlee"
+    },
+    {
+      "calendar_id": "C09",
+      "gold": "gold/C09.json",
+      "month": "2027-04",
+      "days": 30,
+      "font": "Patrick Hand"
+    },
+    {
+      "calendar_id": "C10",
+      "gold": "gold/C10.json",
+      "month": "2024-11",
+      "days": 30,
+      "font": "Caveat"
+    },
+    {
+      "calendar_id": "C11",
+      "gold": "gold/C11.json",
+      "month": "2031-02",
+      "days": 28,
+      "font": "Kalam"
+    },
+    {
+      "calendar_id": "C12",
+      "gold": "gold/C12.json",
+      "month": "2026-04",
+      "days": 30,
+      "font": "Handlee"
+    }
+  ],
+  "images": [
+    {
+      "request_id": "rad3b022b8086adf8",
+      "calendar_id": "C01",
+      "condition": "typed",
+      "gold": "gold/C01.json",
+      "image": "images/rad3b022b8086adf8.png",
+      "image_sha256": "429fb86f4d07f674326ae06398c77803e09aa4091304623f6d679bcad6c5532d",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "r00b3d162e34551cb",
+      "calendar_id": "C01",
+      "condition": "handwriting",
+      "gold": "gold/C01.json",
+      "image": "images/r00b3d162e34551cb.png",
+      "image_sha256": "75e2299bc6f64a81051e06c5b7c4045917572365f6b9d16c8d2b1a0e48608a92",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "rf82db3f7c2b93477",
+      "calendar_id": "C01",
+      "condition": "degraded",
+      "gold": "gold/C01.json",
+      "image": "images/rf82db3f7c2b93477.png",
+      "image_sha256": "3a4123672c368edfdc30487e191d6992e60f37c66e0344347bf5d1b3016d2eff",
+      "dimensions": [
+        1568,
+        1314
+      ]
+    },
+    {
+      "request_id": "r4126bcd142d69d3c",
+      "calendar_id": "C02",
+      "condition": "typed",
+      "gold": "gold/C02.json",
+      "image": "images/r4126bcd142d69d3c.png",
+      "image_sha256": "4e32088ecaf815a8eeee1f6a40d16fc55989c21c8490ca4c828613449cf358d0",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "r87ff750abdd9628e",
+      "calendar_id": "C02",
+      "condition": "handwriting",
+      "gold": "gold/C02.json",
+      "image": "images/r87ff750abdd9628e.png",
+      "image_sha256": "4c3132dc94f669b22f41e2cee5644b04f746053a027891acc5a712909f23d475",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "r085734d964a171a4",
+      "calendar_id": "C02",
+      "condition": "degraded",
+      "gold": "gold/C02.json",
+      "image": "images/r085734d964a171a4.png",
+      "image_sha256": "33dd4611926873ab11db0bd40d6fdfcde3a796a64cdb98e43b54090272f04b9d",
+      "dimensions": [
+        1568,
+        1314
+      ]
+    },
+    {
+      "request_id": "r4b8cbedc2f296132",
+      "calendar_id": "C03",
+      "condition": "typed",
+      "gold": "gold/C03.json",
+      "image": "images/r4b8cbedc2f296132.png",
+      "image_sha256": "b9d32fef1a153f4c96fa6a56172cd07ea94e85f2fc77ef23b6561c824b3f3602",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "rbd34a30f0a04a773",
+      "calendar_id": "C03",
+      "condition": "handwriting",
+      "gold": "gold/C03.json",
+      "image": "images/rbd34a30f0a04a773.png",
+      "image_sha256": "9228b4c52b37f7cbcd0a1a16b98e800483ce46c648772ffbb8e1b47fe8e5bc2c",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "r8d62ac8fa64d3ca3",
+      "calendar_id": "C03",
+      "condition": "degraded",
+      "gold": "gold/C03.json",
+      "image": "images/r8d62ac8fa64d3ca3.png",
+      "image_sha256": "b7a1c0fdf3e2e26589b47f0d52186117837b967f2db6d6f0785ff88d8aa1af9c",
+      "dimensions": [
+        1568,
+        1314
+      ]
+    },
+    {
+      "request_id": "r9da5173435687ee8",
+      "calendar_id": "C04",
+      "condition": "typed",
+      "gold": "gold/C04.json",
+      "image": "images/r9da5173435687ee8.png",
+      "image_sha256": "88f43d5d6ef7aee7e83b9ed15d2a90f1ff14fd7678d5bb7682d3ee6aeccafcf2",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "rca3030fe3b4a7833",
+      "calendar_id": "C04",
+      "condition": "handwriting",
+      "gold": "gold/C04.json",
+      "image": "images/rca3030fe3b4a7833.png",
+      "image_sha256": "8cc52c4c88748f2b9995ac50b182440ea2b2267a28df4b8fbb34656b997fe6e1",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "r544a6f194b3f8331",
+      "calendar_id": "C04",
+      "condition": "degraded",
+      "gold": "gold/C04.json",
+      "image": "images/r544a6f194b3f8331.png",
+      "image_sha256": "932f6c3dba513d0677f855e2e560fe4b1b5df844b11e0061a67aa90f6ffce0c2",
+      "dimensions": [
+        1568,
+        1314
+      ]
+    },
+    {
+      "request_id": "rfa70e7bd01dd05f3",
+      "calendar_id": "C05",
+      "condition": "typed",
+      "gold": "gold/C05.json",
+      "image": "images/rfa70e7bd01dd05f3.png",
+      "image_sha256": "963ed3d3dd681adf9302ff9eec5313b50e0c737e37a2975f2ad622f8f5b2a5d1",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "r23582fdad6756161",
+      "calendar_id": "C05",
+      "condition": "handwriting",
+      "gold": "gold/C05.json",
+      "image": "images/r23582fdad6756161.png",
+      "image_sha256": "591cfa417d0a2452f4231bd67e6ba12030c28f27cebf5ed971a72d5cf4988e7a",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "rcff37060d0c588e6",
+      "calendar_id": "C05",
+      "condition": "degraded",
+      "gold": "gold/C05.json",
+      "image": "images/rcff37060d0c588e6.png",
+      "image_sha256": "58c7883f621bcc0fd1b61d31efb3a8e276af9d6ae859078eed2f4ec256a10422",
+      "dimensions": [
+        1568,
+        1314
+      ]
+    },
+    {
+      "request_id": "r89066999fc783a55",
+      "calendar_id": "C06",
+      "condition": "typed",
+      "gold": "gold/C06.json",
+      "image": "images/r89066999fc783a55.png",
+      "image_sha256": "879e14dd01a43d275b994642cd9aa3da9dfacf45b781a7be4176d02443253c12",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "r0a4615198e5421d2",
+      "calendar_id": "C06",
+      "condition": "handwriting",
+      "gold": "gold/C06.json",
+      "image": "images/r0a4615198e5421d2.png",
+      "image_sha256": "b244ca7ee58ad8daeab65cb07ee9f7db63f37813d316fdfc016e0607a1b21336",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "r9c418e199d41d80d",
+      "calendar_id": "C06",
+      "condition": "degraded",
+      "gold": "gold/C06.json",
+      "image": "images/r9c418e199d41d80d.png",
+      "image_sha256": "0c26f1ad7c27ef9f80f9aa2fb7e4146c1577ccf3b8a80127b22f6bcc2aba55ec",
+      "dimensions": [
+        1568,
+        1314
+      ]
+    },
+    {
+      "request_id": "r354327fdf0ccb69d",
+      "calendar_id": "C07",
+      "condition": "typed",
+      "gold": "gold/C07.json",
+      "image": "images/r354327fdf0ccb69d.png",
+      "image_sha256": "742c6f7f659f1fdded59d5f9ef5dc7e8a74aedd68dbbf56020e542b356bfbb2b",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "re46c7094dc3a63ce",
+      "calendar_id": "C07",
+      "condition": "handwriting",
+      "gold": "gold/C07.json",
+      "image": "images/re46c7094dc3a63ce.png",
+      "image_sha256": "1229c74b9e6e7e80ccd4565610c13e885d909ea0cdfa2440df0ccd46c621fafe",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "rbe69f97969d07ccc",
+      "calendar_id": "C07",
+      "condition": "degraded",
+      "gold": "gold/C07.json",
+      "image": "images/rbe69f97969d07ccc.png",
+      "image_sha256": "da65ff5f8a92136cc0d5749bb7f2b6970e292d3da53e00414319aff940900c9e",
+      "dimensions": [
+        1568,
+        1314
+      ]
+    },
+    {
+      "request_id": "r40385c5a38db292f",
+      "calendar_id": "C08",
+      "condition": "typed",
+      "gold": "gold/C08.json",
+      "image": "images/r40385c5a38db292f.png",
+      "image_sha256": "5cebda74cca4c8763b5eaf537b2924c7e113c007a31773df4e77f2815813de7f",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "re65f90ee921097a0",
+      "calendar_id": "C08",
+      "condition": "handwriting",
+      "gold": "gold/C08.json",
+      "image": "images/re65f90ee921097a0.png",
+      "image_sha256": "92b09e8042bdc4a8cb72bc0af80f9b69d33ea11d927f953f21a5da6025e0b293",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "r9abb24203a00c0b7",
+      "calendar_id": "C08",
+      "condition": "degraded",
+      "gold": "gold/C08.json",
+      "image": "images/r9abb24203a00c0b7.png",
+      "image_sha256": "d88b42537350e802d83f383c94a881071e8310d061f06ade80a3d81dadb26b9e",
+      "dimensions": [
+        1568,
+        1314
+      ]
+    },
+    {
+      "request_id": "r48ddb51fb1544067",
+      "calendar_id": "C09",
+      "condition": "typed",
+      "gold": "gold/C09.json",
+      "image": "images/r48ddb51fb1544067.png",
+      "image_sha256": "42c8d66d77aca3ab8b87242d16e2868c11bf6ae9cbea912465f3a52b82c1144f",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "rab45f4ac936b8520",
+      "calendar_id": "C09",
+      "condition": "handwriting",
+      "gold": "gold/C09.json",
+      "image": "images/rab45f4ac936b8520.png",
+      "image_sha256": "8a9807cd7740780c043b68e454adb1b2499cebdd7cc2f3d8af1e368e8f325e87",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "re706c5a3164fde64",
+      "calendar_id": "C09",
+      "condition": "degraded",
+      "gold": "gold/C09.json",
+      "image": "images/re706c5a3164fde64.png",
+      "image_sha256": "d5933ef3af2e2eaadeaa158838fa7a75b6d2ddef11337fef071c81b14f5ae239",
+      "dimensions": [
+        1568,
+        1314
+      ]
+    },
+    {
+      "request_id": "r893c3e853dfc1de6",
+      "calendar_id": "C10",
+      "condition": "typed",
+      "gold": "gold/C10.json",
+      "image": "images/r893c3e853dfc1de6.png",
+      "image_sha256": "0ba4a733c97195a253da2a237d87a465e5c87a87bd9d76ae77131897efdf9cf3",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "r7aeb3cb1ed4b80f2",
+      "calendar_id": "C10",
+      "condition": "handwriting",
+      "gold": "gold/C10.json",
+      "image": "images/r7aeb3cb1ed4b80f2.png",
+      "image_sha256": "ea505e7e8be69dcc95cf0fa4f35e1edba7c1215f47ebf0bdcf3d4e6433d8971e",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "r732ff042c44a31b5",
+      "calendar_id": "C10",
+      "condition": "degraded",
+      "gold": "gold/C10.json",
+      "image": "images/r732ff042c44a31b5.png",
+      "image_sha256": "63f619c43b819e65f917a66505af03e379a3cea63434c7a0be7e1a0d407b768d",
+      "dimensions": [
+        1568,
+        1314
+      ]
+    },
+    {
+      "request_id": "r373f8ebd7bfe4a93",
+      "calendar_id": "C11",
+      "condition": "typed",
+      "gold": "gold/C11.json",
+      "image": "images/r373f8ebd7bfe4a93.png",
+      "image_sha256": "224cedfd9c561e93a8bdb5b908b239aea0d3667bdf293568f6493b59a0428ce0",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "rb3eb06d90d68efb9",
+      "calendar_id": "C11",
+      "condition": "handwriting",
+      "gold": "gold/C11.json",
+      "image": "images/rb3eb06d90d68efb9.png",
+      "image_sha256": "72a612f910f9bac95a9b3aebac683ec14e0c8419bfea9b2e5927265fecbdfb03",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "r8dbd603d27292783",
+      "calendar_id": "C11",
+      "condition": "degraded",
+      "gold": "gold/C11.json",
+      "image": "images/r8dbd603d27292783.png",
+      "image_sha256": "9ec867249002698de1fbb34be90e8a81d6e576c6bfcff03df4c3a723ab4d12bd",
+      "dimensions": [
+        1568,
+        1314
+      ]
+    },
+    {
+      "request_id": "r129d0163c458a091",
+      "calendar_id": "C12",
+      "condition": "typed",
+      "gold": "gold/C12.json",
+      "image": "images/r129d0163c458a091.png",
+      "image_sha256": "daa4b0bd7052136b7c27bf8e5a24bb83f2ba29cd2a5f7966bb4573667de3dcc2",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "rdabd35ebf3e8c919",
+      "calendar_id": "C12",
+      "condition": "handwriting",
+      "gold": "gold/C12.json",
+      "image": "images/rdabd35ebf3e8c919.png",
+      "image_sha256": "b95040922b74c0ccfa3cead62cb49ce8a391a445cf295577d64e8d32827d6b35",
+      "dimensions": [
+        1540,
+        1280
+      ]
+    },
+    {
+      "request_id": "rb4f160c1d309f6a0",
+      "calendar_id": "C12",
+      "condition": "degraded",
+      "gold": "gold/C12.json",
+      "image": "images/rb4f160c1d309f6a0.png",
+      "image_sha256": "0862eb7f275712e090fae3f13accb5176739dec3c8d2606147319fb25ddd55a7",
+      "dimensions": [
+        1568,
+        1314
+      ]
+    }
+  ],
+  "request_order": [
+    "r23582fdad6756161",
+    "r4b8cbedc2f296132",
+    "r544a6f194b3f8331",
+    "rdabd35ebf3e8c919",
+    "re706c5a3164fde64",
+    "r354327fdf0ccb69d",
+    "re65f90ee921097a0",
+    "r732ff042c44a31b5",
+    "rb3eb06d90d68efb9",
+    "rad3b022b8086adf8",
+    "rb4f160c1d309f6a0",
+    "rfa70e7bd01dd05f3",
+    "r8dbd603d27292783",
+    "r0a4615198e5421d2",
+    "r085734d964a171a4",
+    "re46c7094dc3a63ce",
+    "rbd34a30f0a04a773",
+    "rcff37060d0c588e6",
+    "r8d62ac8fa64d3ca3",
+    "rbe69f97969d07ccc",
+    "rca3030fe3b4a7833",
+    "r48ddb51fb1544067",
+    "r9abb24203a00c0b7",
+    "r40385c5a38db292f",
+    "r129d0163c458a091",
+    "r373f8ebd7bfe4a93",
+    "r4126bcd142d69d3c",
+    "r9c418e199d41d80d",
+    "r9da5173435687ee8",
+    "r7aeb3cb1ed4b80f2",
+    "rab45f4ac936b8520",
+    "r00b3d162e34551cb",
+    "r87ff750abdd9628e",
+    "r893c3e853dfc1de6",
+    "rf82db3f7c2b93477",
+    "r89066999fc783a55"
+  ]
+}

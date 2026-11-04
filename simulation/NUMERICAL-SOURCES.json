@@ -1,0 +1,122 @@
+{
+  "scope": "Completed simulation methods, actual observations and software controls",
+  "sources": [
+    {
+      "claim": "12 latent calendars",
+      "path": "simulation/manifest.json",
+      "pointer": "/calendar_count"
+    },
+    {
+      "claim": "36 images",
+      "path": "simulation/manifest.json",
+      "pointer": "/image_count"
+    },
+    {
+      "claim": "seed 2026110301",
+      "path": "simulation/manifest.json",
+      "pointer": "/seed"
+    },
+    {
+      "claim": "years 2024 through 2032",
+      "path": "simulation/build_simulation.py",
+      "expression": "range(2024, 2033)"
+    },
+    {
+      "claim": "three calendars per month length 28/29/30/31",
+      "path": "simulation/evidence/CORPUS-TESTS.json",
+      "pointer": "/month_length_counts"
+    },
+    {
+      "claim": "354 date cells per condition",
+      "path": "simulation/evidence/CORPUS-TESTS.json",
+      "pointer": "/gold_day_total_per_condition"
+    },
+    {
+      "claim": "1062 rendered date cells total",
+      "path": "simulation/manifest.json",
+      "expression": "sum(calendars[*].days) * 3"
+    },
+    {
+      "claim": "six statuses; five day notes; two global notes per calendar",
+      "path": "simulation/build_simulation.py",
+      "expression": "CODE; sample(...,5); sample(GLOBALS,2); verified in test_simulation.py"
+    },
+    {
+      "claim": "four handwriting families with three calendars each",
+      "path": "simulation/evidence/CORPUS-TESTS.json",
+      "pointer": "/font_calendar_counts"
+    },
+    {
+      "claim": "temperature 0; max output 4096",
+      "path": "simulation/requests.json",
+      "pointer": "/settings_requested",
+      "limit": "requested, not proof of effective settings"
+    },
+    {
+      "claim": "95 percent descriptive intervals; 10000 resamples; seed2026110302",
+      "path": "simulation/score_simulation.py",
+      "expression": "wilson and paired_summary"
+    },
+    {
+      "claim": "11 test methods passed",
+      "path": "simulation/evidence/unit-tests.log",
+      "expression": "Ran 11 tests; OK"
+    },
+    {
+      "claim": "36 PNG decodes",
+      "path": "simulation/evidence/CORPUS-TESTS.json",
+      "pointer": "/png_decodes"
+    },
+    {
+      "claim": "36 of36 known-answer controls; zero of36 missing-observation controls",
+      "path": "simulation/evidence/CORPUS-TESTS.json",
+      "pointers": [
+        "/oracle_end_to_end_control",
+        "/missing_observation_control"
+      ],
+      "limit": "software controls, not empirical model outcomes"
+    },
+    {
+      "claim": "36 of36 first observations",
+      "path": "simulation/results/EXECUTION-SUMMARY.json",
+      "pointer": "/observed"
+    },
+    {
+      "claim": "outcome counts, finish reasons, generation time",
+      "path": "simulation/results/EXECUTION-SUMMARY.json",
+      "pointer": "/"
+    },
+    {
+      "claim": "per-condition exactness/status/notes/flips/unscorable counts and Wilson intervals",
+      "path": "simulation/results/SCORES.json",
+      "pointer": "/conditions"
+    },
+    {
+      "claim": "paired differences and percentile intervals",
+      "path": "simulation/results/SCORES.json",
+      "pointer": "/paired"
+    },
+    {
+      "claim": "temperature0;4096 output tokens;600s timeout;32768 context;one parallel slot",
+      "path": "simulation/results/EXECUTION-SETTINGS.json",
+      "pointer": "/records"
+    },
+    {
+      "claim": "non-exact calendars and case-specific errors",
+      "path": "simulation/results/ERRORS.json",
+      "pointer": "/"
+    },
+    {
+      "claim": "67 same-environment frozen files reproduced identically",
+      "path": "simulation/evidence/REPRODUCTION.json",
+      "pointer": "/same_environment_frozen_file_matches"
+    },
+    {
+      "claim": "15 schema failures;14 literal-code schema failures;1 omitted date;21 scorable responses;11 status and6 day-note mismatches;May29/31 note example",
+      "path": "simulation/results/FAILURE-DIAGNOSTICS.json",
+      "pointer": "/",
+      "additional_path": "simulation/results/ERRORS.json"
+    }
+  ],
+  "path_base": "repository root"
+}

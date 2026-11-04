@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "freeze_unchanged": true,
+  "public_replay_equals_published_scores": true,
+  "unchanged_assistant_texts": 36,
+  "report_copies_equal": true,
+  "numerical_source_entries": 22,
+  "source_paths_and_json_pointers_resolve": true,
+  "private_path_scan_hits": [],
+  "pdf_pages": 4,
+  "pdf_encrypted": false,
+  "pdf_document_open_actions": false,
+  "pdf_sha256": "866000bb6e7a4b2e5bad3c4e1a7667db8fde09c900d74ac59a1913b532e407d2",
+  "visual_review": "PASS: four-page manuscript reviewed; editorial first-page revision rechecked; figure/caption remain together, no overflow observed"
+}

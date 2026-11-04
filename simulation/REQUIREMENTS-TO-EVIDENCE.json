@@ -1,0 +1,111 @@
+{
+  "edition": "ED(i) SIMULATION pilot",
+  "requirements": [
+    {
+      "requirement": "Preserve the original human-study software and evidence",
+      "evidence": [
+        "simulation/manifest.json:base_commit",
+        "simulation/PLAN.md"
+      ],
+      "status": "implemented as separate simulation directory; no canonical checkout edits"
+    },
+    {
+      "requirement": "Random fictional months including 28, 29, 30 and 31 days",
+      "evidence": [
+        "simulation/build_simulation.py",
+        "simulation/manifest.json:calendars",
+        "simulation/evidence/CORPUS-TESTS.json:month_length_counts"
+      ],
+      "status": "verified"
+    },
+    {
+      "requirement": "Paired typed, handwriting-font and degraded handwritten images",
+      "evidence": [
+        "simulation/manifest.json:images",
+        "simulation/build_simulation.py:degrade",
+        "simulation/evidence/all-36-contact-sheet.png"
+      ],
+      "status": "verified"
+    },
+    {
+      "requirement": "Licensed varied fonts and no personal signatures",
+      "evidence": [
+        "simulation/fonts.json",
+        "simulation/assets/fonts",
+        "simulation/evidence/CORPUS-TESTS.json:font_calendar_counts"
+      ],
+      "status": "four handwriting families, three latent calendars each; fictional marks only"
+    },
+    {
+      "requirement": "Truth, prompts, scorer and request order frozen before model calls",
+      "evidence": [
+        "simulation/FREEZE.json",
+        "simulation/requests.json"
+      ],
+      "status": "verified freeze before inference; 36 actual first observations and receipt bindings delivered"
+    },
+    {
+      "requirement": "Image-only model inputs without gold leakage",
+      "evidence": [
+        "simulation/INPUT-CONTRACT.md",
+        "simulation/requests.json",
+        "simulation/evidence/CORPUS-TESTS.json:request_fields_blind"
+      ],
+      "status": "native caller mapping verified independently; one image plus exact common prompt per observation"
+    },
+    {
+      "requirement": "Unavailable marks, explicit blank legend and fictional notes",
+      "evidence": [
+        "simulation/PLAN.md",
+        "simulation/gold",
+        "simulation/images",
+        "simulation/test_simulation.py"
+      ],
+      "status": "verified in generated data and scoring controls"
+    },
+    {
+      "requirement": "Strict month/date/status/note correctness",
+      "evidence": [
+        "simulation/score_simulation.py",
+        "simulation/test_simulation.py",
+        "simulation/evidence/unit-tests.log"
+      ],
+      "status": "11 test methods passed; response failures retained"
+    },
+    {
+      "requirement": "Paired calendar-level statistics and descriptive uncertainty",
+      "evidence": [
+        "simulation/PLAN.md",
+        "simulation/score_simulation.py:paired_summary",
+        "simulation/test_simulation.py:test_cluster_intervals_and_pairing_extremes"
+      ],
+      "status": "implemented and tested, n=12 paired clusters"
+    },
+    {
+      "requirement": "Actual model outcomes, no fabricated successes",
+      "evidence": [
+        "simulation/INPUT-CONTRACT.md",
+        "simulation/evidence/CORPUS-TESTS.json:actual_model_calls_by_producer",
+        "simulation/results/OBSERVATIONS.json",
+        "simulation/results/OBSERVATION-PROVENANCE.json"
+      ],
+      "status": "complete:36 actual first observations, preserved text and receipt hashes, exact public rescoring equality"
+    },
+    {
+      "requirement": "Completion independent of model performance",
+      "evidence": [
+        "simulation/PLAN.md:Completion and limits"
+      ],
+      "status": "frozen prospective rule"
+    },
+    {
+      "requirement": "Report clearly labels simulation and preserves human-study limitations",
+      "evidence": [
+        "docs/SIMULATION-STUDY.md",
+        "simulation/NUMERICAL-SOURCES.json"
+      ],
+      "status": "complete:actual scores, paired figure, failure analysis and limitations"
+    }
+  ],
+  "path_base": "repository root"
+}

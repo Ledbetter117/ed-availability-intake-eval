@@ -1,0 +1,20 @@
+{
+  "model_labels": [
+    "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF"
+  ],
+  "outcomes": {
+    "response": 36
+  },
+  "finish_reasons": {
+    "stop": 36
+  },
+  "observed": 36,
+  "scheduled": 36,
+  "measured_generation_seconds_sum": 212.269,
+  "timed_observations": 36,
+  "elapsed_limit": "sum of native generation step seconds; not end-to-end study wall time",
+  "weights_sha256": "800116a575a514f9e45213e48d3037b0a42b2530d9e545be8699b9967df9da10",
+  "projector_sha256": "6bc77b7ac2b62cf61bc86757605e45e39f6345373f0a6b76cc5b1ed97f2e233e",
+  "model_snapshot": "b738967d6da3441a7d1c71fcec15e49e32e16ecd",
+  "identity_source": "root-verified execution identity; receipt hashes in OBSERVATION-PROVENANCE.json"
+}

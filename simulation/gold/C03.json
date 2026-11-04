@@ -1,0 +1,125 @@
+{
+  "month": "2028-02",
+  "days": {
+    "2028-02-01": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2028-02-02": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2028-02-03": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2028-02-04": {
+      "status": "PM",
+      "note": ""
+    },
+    "2028-02-05": {
+      "status": "AM",
+      "note": ""
+    },
+    "2028-02-06": {
+      "status": "PM",
+      "note": ""
+    },
+    "2028-02-07": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2028-02-08": {
+      "status": "AM",
+      "note": ""
+    },
+    "2028-02-09": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2028-02-10": {
+      "status": "PM",
+      "note": "training"
+    },
+    "2028-02-11": {
+      "status": "PM",
+      "note": ""
+    },
+    "2028-02-12": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2028-02-13": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2028-02-14": {
+      "status": "PM",
+      "note": "swap OK"
+    },
+    "2028-02-15": {
+      "status": "NIGHT",
+      "note": "leave at 4"
+    },
+    "2028-02-16": {
+      "status": "NOT_SPECIFIED",
+      "note": "float OK"
+    },
+    "2028-02-17": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2028-02-18": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2028-02-19": {
+      "status": "PM",
+      "note": ""
+    },
+    "2028-02-20": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2028-02-21": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2028-02-22": {
+      "status": "AM",
+      "note": ""
+    },
+    "2028-02-23": {
+      "status": "UNAVAILABLE",
+      "note": "early out"
+    },
+    "2028-02-24": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2028-02-25": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2028-02-26": {
+      "status": "PM",
+      "note": ""
+    },
+    "2028-02-27": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2028-02-28": {
+      "status": "PM",
+      "note": ""
+    },
+    "2028-02-29": {
+      "status": "AM",
+      "note": ""
+    }
+  },
+  "global_notes": [
+    "No extra call",
+    "Request one weekend off"
+  ]
+}

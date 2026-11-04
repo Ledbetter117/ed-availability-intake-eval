@@ -17,6 +17,7 @@ commands += [[f"tests/{name}.py", "."] for name in (
 commands += [["packaging/tests/test_release_wrapper.py", "packaging/run_ed_i.py"]]
 commands += [["tests/test_public_security.py"]]
 commands += [["tests/test_parse_response_bounds.py"]]
+commands += [["simulation/test_simulation.py"]]
 failed = []
 for args in commands:
     print("CHECK " + " ".join(args), flush=True)

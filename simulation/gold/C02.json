@@ -1,0 +1,133 @@
+{
+  "month": "2029-10",
+  "days": {
+    "2029-10-01": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2029-10-02": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2029-10-03": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2029-10-04": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2029-10-05": {
+      "status": "UNAVAILABLE",
+      "note": "no call"
+    },
+    "2029-10-06": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2029-10-07": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2029-10-08": {
+      "status": "AM",
+      "note": "after 10"
+    },
+    "2029-10-09": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2029-10-10": {
+      "status": "NIGHT",
+      "note": ""
+    },
+    "2029-10-11": {
+      "status": "AM",
+      "note": "swap OK"
+    },
+    "2029-10-12": {
+      "status": "AM",
+      "note": ""
+    },
+    "2029-10-13": {
+      "status": "PM",
+      "note": ""
+    },
+    "2029-10-14": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2029-10-15": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2029-10-16": {
+      "status": "AM",
+      "note": ""
+    },
+    "2029-10-17": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2029-10-18": {
+      "status": "PM",
+      "note": ""
+    },
+    "2029-10-19": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2029-10-20": {
+      "status": "AM",
+      "note": ""
+    },
+    "2029-10-21": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2029-10-22": {
+      "status": "AM",
+      "note": "training"
+    },
+    "2029-10-23": {
+      "status": "NIGHT",
+      "note": "float OK"
+    },
+    "2029-10-24": {
+      "status": "AVAILABLE",
+      "note": ""
+    },
+    "2029-10-25": {
+      "status": "AM",
+      "note": ""
+    },
+    "2029-10-26": {
+      "status": "UNAVAILABLE",
+      "note": ""
+    },
+    "2029-10-27": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2029-10-28": {
+      "status": "AM",
+      "note": ""
+    },
+    "2029-10-29": {
+      "status": "AM",
+      "note": ""
+    },
+    "2029-10-30": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    },
+    "2029-10-31": {
+      "status": "NOT_SPECIFIED",
+      "note": ""
+    }
+  },
+  "global_notes": [
+    "Ask before swapping",
+    "Prefer mornings"
+  ]
+}

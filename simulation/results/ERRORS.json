@@ -1,0 +1,386 @@
+[
+  {
+    "request_id": "r00b3d162e34551cb",
+    "calendar_id": "C01",
+    "condition": "handwriting",
+    "failure": null,
+    "status_mismatches": [],
+    "note_mismatches": [
+      {
+        "date": "2028-05-31",
+        "gold": "",
+        "predicted": "swap OK"
+      }
+    ],
+    "global_notes": {
+      "gold": [
+        "No extra call",
+        "Ask before swapping"
+      ],
+      "predicted": [
+        "No extra call",
+        "Ask before swapping"
+      ]
+    }
+  },
+  {
+    "request_id": "r9da5173435687ee8",
+    "calendar_id": "C04",
+    "condition": "typed",
+    "failure": "invalid_json_or_schema: status"
+  },
+  {
+    "request_id": "rca3030fe3b4a7833",
+    "calendar_id": "C04",
+    "condition": "handwriting",
+    "failure": "invalid_json_or_schema: status"
+  },
+  {
+    "request_id": "r544a6f194b3f8331",
+    "calendar_id": "C04",
+    "condition": "degraded",
+    "failure": "invalid_json_or_schema: status"
+  },
+  {
+    "request_id": "rcff37060d0c588e6",
+    "calendar_id": "C05",
+    "condition": "degraded",
+    "failure": "invalid_json_or_schema: status"
+  },
+  {
+    "request_id": "r89066999fc783a55",
+    "calendar_id": "C06",
+    "condition": "typed",
+    "failure": "invalid_json_or_schema: status"
+  },
+  {
+    "request_id": "r0a4615198e5421d2",
+    "calendar_id": "C06",
+    "condition": "handwriting",
+    "failure": null,
+    "status_mismatches": [],
+    "note_mismatches": [
+      {
+        "date": "2026-08-29",
+        "gold": "",
+        "predicted": "no call"
+      }
+    ],
+    "global_notes": {
+      "gold": [
+        "Prefer mornings",
+        "Training pending"
+      ],
+      "predicted": [
+        "Prefer mornings",
+        "Training pending"
+      ]
+    }
+  },
+  {
+    "request_id": "r9c418e199d41d80d",
+    "calendar_id": "C06",
+    "condition": "degraded",
+    "failure": "invalid_json_or_schema: status"
+  },
+  {
+    "request_id": "r354327fdf0ccb69d",
+    "calendar_id": "C07",
+    "condition": "typed",
+    "failure": "invalid_json_or_schema: date set does not equal actual month"
+  },
+  {
+    "request_id": "re46c7094dc3a63ce",
+    "calendar_id": "C07",
+    "condition": "handwriting",
+    "failure": "invalid_json_or_schema: status"
+  },
+  {
+    "request_id": "rbe69f97969d07ccc",
+    "calendar_id": "C07",
+    "condition": "degraded",
+    "failure": "invalid_json_or_schema: status"
+  },
+  {
+    "request_id": "r40385c5a38db292f",
+    "calendar_id": "C08",
+    "condition": "typed",
+    "failure": null,
+    "status_mismatches": [
+      {
+        "date": "2029-02-10",
+        "gold": "NOT_SPECIFIED",
+        "predicted": "UNAVAILABLE"
+      }
+    ],
+    "note_mismatches": [],
+    "global_notes": {
+      "gold": [
+        "Request one weekend off",
+        "Training pending"
+      ],
+      "predicted": [
+        "Request one weekend off",
+        "Training pending"
+      ]
+    }
+  },
+  {
+    "request_id": "re65f90ee921097a0",
+    "calendar_id": "C08",
+    "condition": "handwriting",
+    "failure": null,
+    "status_mismatches": [
+      {
+        "date": "2029-02-10",
+        "gold": "NOT_SPECIFIED",
+        "predicted": "UNAVAILABLE"
+      }
+    ],
+    "note_mismatches": [],
+    "global_notes": {
+      "gold": [
+        "Request one weekend off",
+        "Training pending"
+      ],
+      "predicted": [
+        "Request one weekend off",
+        "Training pending"
+      ]
+    }
+  },
+  {
+    "request_id": "r9abb24203a00c0b7",
+    "calendar_id": "C08",
+    "condition": "degraded",
+    "failure": null,
+    "status_mismatches": [
+      {
+        "date": "2029-02-10",
+        "gold": "NOT_SPECIFIED",
+        "predicted": "UNAVAILABLE"
+      }
+    ],
+    "note_mismatches": [],
+    "global_notes": {
+      "gold": [
+        "Request one weekend off",
+        "Training pending"
+      ],
+      "predicted": [
+        "Request one weekend off",
+        "Training pending"
+      ]
+    }
+  },
+  {
+    "request_id": "r48ddb51fb1544067",
+    "calendar_id": "C09",
+    "condition": "typed",
+    "failure": "invalid_json_or_schema: status"
+  },
+  {
+    "request_id": "rab45f4ac936b8520",
+    "calendar_id": "C09",
+    "condition": "handwriting",
+    "failure": "invalid_json_or_schema: status"
+  },
+  {
+    "request_id": "re706c5a3164fde64",
+    "calendar_id": "C09",
+    "condition": "degraded",
+    "failure": "invalid_json_or_schema: status"
+  },
+  {
+    "request_id": "r893c3e853dfc1de6",
+    "calendar_id": "C10",
+    "condition": "typed",
+    "failure": "invalid_json_or_schema: status"
+  },
+  {
+    "request_id": "r7aeb3cb1ed4b80f2",
+    "calendar_id": "C10",
+    "condition": "handwriting",
+    "failure": "invalid_json_or_schema: status"
+  },
+  {
+    "request_id": "r732ff042c44a31b5",
+    "calendar_id": "C10",
+    "condition": "degraded",
+    "failure": "invalid_json_or_schema: status"
+  },
+  {
+    "request_id": "r373f8ebd7bfe4a93",
+    "calendar_id": "C11",
+    "condition": "typed",
+    "failure": null,
+    "status_mismatches": [],
+    "note_mismatches": [
+      {
+        "date": "2031-02-01",
+        "gold": "",
+        "predicted": "A"
+      }
+    ],
+    "global_notes": {
+      "gold": [
+        "Request one weekend off",
+        "Prefer mornings"
+      ],
+      "predicted": [
+        "Request one weekend off",
+        "Prefer mornings"
+      ]
+    }
+  },
+  {
+    "request_id": "rb3eb06d90d68efb9",
+    "calendar_id": "C11",
+    "condition": "handwriting",
+    "failure": null,
+    "status_mismatches": [],
+    "note_mismatches": [
+      {
+        "date": "2031-02-01",
+        "gold": "",
+        "predicted": "A"
+      }
+    ],
+    "global_notes": {
+      "gold": [
+        "Request one weekend off",
+        "Prefer mornings"
+      ],
+      "predicted": [
+        "Request one weekend off",
+        "Prefer mornings"
+      ]
+    }
+  },
+  {
+    "request_id": "r8dbd603d27292783",
+    "calendar_id": "C11",
+    "condition": "degraded",
+    "failure": null,
+    "status_mismatches": [],
+    "note_mismatches": [
+      {
+        "date": "2031-02-01",
+        "gold": "",
+        "predicted": "A"
+      },
+      {
+        "date": "2031-02-04",
+        "gold": "",
+        "predicted": "Tue mornings"
+      }
+    ],
+    "global_notes": {
+      "gold": [
+        "Request one weekend off",
+        "Prefer mornings"
+      ],
+      "predicted": [
+        "Request one weekend off",
+        "Prefer mornings"
+      ]
+    }
+  },
+  {
+    "request_id": "r129d0163c458a091",
+    "calendar_id": "C12",
+    "condition": "typed",
+    "failure": null,
+    "status_mismatches": [
+      {
+        "date": "2026-04-09",
+        "gold": "NOT_SPECIFIED",
+        "predicted": "PM"
+      }
+    ],
+    "note_mismatches": [],
+    "global_notes": {
+      "gold": [
+        "Prefer mornings",
+        "No extra call"
+      ],
+      "predicted": [
+        "Prefer mornings",
+        "No extra call"
+      ]
+    }
+  },
+  {
+    "request_id": "rdabd35ebf3e8c919",
+    "calendar_id": "C12",
+    "condition": "handwriting",
+    "failure": null,
+    "status_mismatches": [
+      {
+        "date": "2026-04-01",
+        "gold": "AM",
+        "predicted": "NOT_SPECIFIED"
+      },
+      {
+        "date": "2026-04-09",
+        "gold": "NOT_SPECIFIED",
+        "predicted": "PM"
+      },
+      {
+        "date": "2026-04-11",
+        "gold": "NOT_SPECIFIED",
+        "predicted": "AVAILABLE"
+      },
+      {
+        "date": "2026-04-25",
+        "gold": "NOT_SPECIFIED",
+        "predicted": "AVAILABLE"
+      }
+    ],
+    "note_mismatches": [],
+    "global_notes": {
+      "gold": [
+        "Prefer mornings",
+        "No extra call"
+      ],
+      "predicted": [
+        "Prefer mornings",
+        "No extra call"
+      ]
+    }
+  },
+  {
+    "request_id": "rb4f160c1d309f6a0",
+    "calendar_id": "C12",
+    "condition": "degraded",
+    "failure": null,
+    "status_mismatches": [
+      {
+        "date": "2026-04-09",
+        "gold": "NOT_SPECIFIED",
+        "predicted": "PM"
+      },
+      {
+        "date": "2026-04-11",
+        "gold": "NOT_SPECIFIED",
+        "predicted": "AVAILABLE"
+      },
+      {
+        "date": "2026-04-25",
+        "gold": "NOT_SPECIFIED",
+        "predicted": "AVAILABLE"
+      }
+    ],
+    "note_mismatches": [],
+    "global_notes": {
+      "gold": [
+        "Prefer mornings",
+        "No extra call"
+      ],
+      "predicted": [
+        "Prefer mornings",
+        "No extra call"
+      ]
+    }
+  }
+]

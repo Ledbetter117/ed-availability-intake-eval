@@ -1,0 +1,453 @@
+{
+  "posthoc_descriptive_diagnostics_only": true,
+  "primary_scores_unchanged": true,
+  "invalid_schema_calendars": 15,
+  "invalid_status_calendars": 14,
+  "invalid_status_value_counts": {
+    "NOC": 44,
+    "A": 15,
+    "X": 16
+  },
+  "missing_date_calendars": 1,
+  "scorable_calendars": 21,
+  "scorable_status_mismatches": 11,
+  "scorable_note_mismatches": 6,
+  "details": [
+    {
+      "request_id": "r9da5173435687ee8",
+      "calendar_id": "C04",
+      "condition": "typed",
+      "invalid_statuses": [
+        {
+          "date": "2024-02-10",
+          "value": "NOC"
+        }
+      ],
+      "missing_dates": [],
+      "extra_dates": []
+    },
+    {
+      "request_id": "rca3030fe3b4a7833",
+      "calendar_id": "C04",
+      "condition": "handwriting",
+      "invalid_statuses": [
+        {
+          "date": "2024-02-10",
+          "value": "NOC"
+        }
+      ],
+      "missing_dates": [],
+      "extra_dates": []
+    },
+    {
+      "request_id": "r544a6f194b3f8331",
+      "calendar_id": "C04",
+      "condition": "degraded",
+      "invalid_statuses": [
+        {
+          "date": "2024-02-10",
+          "value": "NOC"
+        }
+      ],
+      "missing_dates": [],
+      "extra_dates": []
+    },
+    {
+      "request_id": "rcff37060d0c588e6",
+      "calendar_id": "C05",
+      "condition": "degraded",
+      "invalid_statuses": [
+        {
+          "date": "2027-02-05",
+          "value": "A"
+        },
+        {
+          "date": "2027-02-06",
+          "value": "X"
+        },
+        {
+          "date": "2027-02-08",
+          "value": "A"
+        },
+        {
+          "date": "2027-02-14",
+          "value": "X"
+        },
+        {
+          "date": "2027-02-15",
+          "value": "A"
+        },
+        {
+          "date": "2027-02-18",
+          "value": "NOC"
+        },
+        {
+          "date": "2027-02-19",
+          "value": "X"
+        },
+        {
+          "date": "2027-02-20",
+          "value": "NOC"
+        },
+        {
+          "date": "2027-02-21",
+          "value": "A"
+        },
+        {
+          "date": "2027-02-22",
+          "value": "A"
+        },
+        {
+          "date": "2027-02-25",
+          "value": "NOC"
+        },
+        {
+          "date": "2027-02-26",
+          "value": "X"
+        },
+        {
+          "date": "2027-02-27",
+          "value": "A"
+        }
+      ],
+      "missing_dates": [],
+      "extra_dates": []
+    },
+    {
+      "request_id": "r89066999fc783a55",
+      "calendar_id": "C06",
+      "condition": "typed",
+      "invalid_statuses": [
+        {
+          "date": "2026-08-03",
+          "value": "NOC"
+        },
+        {
+          "date": "2026-08-07",
+          "value": "NOC"
+        },
+        {
+          "date": "2026-08-09",
+          "value": "NOC"
+        },
+        {
+          "date": "2026-08-21",
+          "value": "NOC"
+        }
+      ],
+      "missing_dates": [],
+      "extra_dates": []
+    },
+    {
+      "request_id": "r9c418e199d41d80d",
+      "calendar_id": "C06",
+      "condition": "degraded",
+      "invalid_statuses": [
+        {
+          "date": "2026-08-03",
+          "value": "NOC"
+        },
+        {
+          "date": "2026-08-07",
+          "value": "NOC"
+        },
+        {
+          "date": "2026-08-09",
+          "value": "NOC"
+        },
+        {
+          "date": "2026-08-21",
+          "value": "NOC"
+        }
+      ],
+      "missing_dates": [],
+      "extra_dates": []
+    },
+    {
+      "request_id": "r354327fdf0ccb69d",
+      "calendar_id": "C07",
+      "condition": "typed",
+      "invalid_statuses": [],
+      "missing_dates": [
+        "2032-02-01"
+      ],
+      "extra_dates": []
+    },
+    {
+      "request_id": "re46c7094dc3a63ce",
+      "calendar_id": "C07",
+      "condition": "handwriting",
+      "invalid_statuses": [
+        {
+          "date": "2032-02-02",
+          "value": "NOC"
+        },
+        {
+          "date": "2032-02-03",
+          "value": "NOC"
+        },
+        {
+          "date": "2032-02-06",
+          "value": "NOC"
+        }
+      ],
+      "missing_dates": [],
+      "extra_dates": []
+    },
+    {
+      "request_id": "rbe69f97969d07ccc",
+      "calendar_id": "C07",
+      "condition": "degraded",
+      "invalid_statuses": [
+        {
+          "date": "2032-02-02",
+          "value": "NOC"
+        },
+        {
+          "date": "2032-02-03",
+          "value": "NOC"
+        },
+        {
+          "date": "2032-02-06",
+          "value": "NOC"
+        }
+      ],
+      "missing_dates": [],
+      "extra_dates": []
+    },
+    {
+      "request_id": "r48ddb51fb1544067",
+      "calendar_id": "C09",
+      "condition": "typed",
+      "invalid_statuses": [
+        {
+          "date": "2027-04-04",
+          "value": "NOC"
+        },
+        {
+          "date": "2027-04-17",
+          "value": "NOC"
+        },
+        {
+          "date": "2027-04-30",
+          "value": "NOC"
+        }
+      ],
+      "missing_dates": [],
+      "extra_dates": []
+    },
+    {
+      "request_id": "rab45f4ac936b8520",
+      "calendar_id": "C09",
+      "condition": "handwriting",
+      "invalid_statuses": [
+        {
+          "date": "2027-04-04",
+          "value": "NOC"
+        },
+        {
+          "date": "2027-04-17",
+          "value": "NOC"
+        },
+        {
+          "date": "2027-04-30",
+          "value": "NOC"
+        }
+      ],
+      "missing_dates": [],
+      "extra_dates": []
+    },
+    {
+      "request_id": "re706c5a3164fde64",
+      "calendar_id": "C09",
+      "condition": "degraded",
+      "invalid_statuses": [
+        {
+          "date": "2027-04-04",
+          "value": "NOC"
+        },
+        {
+          "date": "2027-04-17",
+          "value": "NOC"
+        },
+        {
+          "date": "2027-04-30",
+          "value": "NOC"
+        }
+      ],
+      "missing_dates": [],
+      "extra_dates": []
+    },
+    {
+      "request_id": "r893c3e853dfc1de6",
+      "calendar_id": "C10",
+      "condition": "typed",
+      "invalid_statuses": [
+        {
+          "date": "2024-11-02",
+          "value": "NOC"
+        },
+        {
+          "date": "2024-11-03",
+          "value": "A"
+        },
+        {
+          "date": "2024-11-06",
+          "value": "X"
+        },
+        {
+          "date": "2024-11-07",
+          "value": "X"
+        },
+        {
+          "date": "2024-11-11",
+          "value": "X"
+        },
+        {
+          "date": "2024-11-14",
+          "value": "X"
+        },
+        {
+          "date": "2024-11-17",
+          "value": "NOC"
+        },
+        {
+          "date": "2024-11-18",
+          "value": "A"
+        },
+        {
+          "date": "2024-11-19",
+          "value": "NOC"
+        },
+        {
+          "date": "2024-11-20",
+          "value": "X"
+        },
+        {
+          "date": "2024-11-22",
+          "value": "NOC"
+        },
+        {
+          "date": "2024-11-24",
+          "value": "A"
+        },
+        {
+          "date": "2024-11-25",
+          "value": "NOC"
+        },
+        {
+          "date": "2024-11-30",
+          "value": "X"
+        }
+      ],
+      "missing_dates": [],
+      "extra_dates": []
+    },
+    {
+      "request_id": "r7aeb3cb1ed4b80f2",
+      "calendar_id": "C10",
+      "condition": "handwriting",
+      "invalid_statuses": [
+        {
+          "date": "2024-11-02",
+          "value": "NOC"
+        },
+        {
+          "date": "2024-11-03",
+          "value": "A"
+        },
+        {
+          "date": "2024-11-06",
+          "value": "X"
+        },
+        {
+          "date": "2024-11-07",
+          "value": "X"
+        },
+        {
+          "date": "2024-11-11",
+          "value": "X"
+        },
+        {
+          "date": "2024-11-14",
+          "value": "X"
+        },
+        {
+          "date": "2024-11-17",
+          "value": "NOC"
+        },
+        {
+          "date": "2024-11-18",
+          "value": "A"
+        },
+        {
+          "date": "2024-11-19",
+          "value": "NOC"
+        },
+        {
+          "date": "2024-11-20",
+          "value": "X"
+        },
+        {
+          "date": "2024-11-22",
+          "value": "NOC"
+        },
+        {
+          "date": "2024-11-24",
+          "value": "A"
+        },
+        {
+          "date": "2024-11-25",
+          "value": "NOC"
+        },
+        {
+          "date": "2024-11-30",
+          "value": "X"
+        }
+      ],
+      "missing_dates": [],
+      "extra_dates": []
+    },
+    {
+      "request_id": "r732ff042c44a31b5",
+      "calendar_id": "C10",
+      "condition": "degraded",
+      "invalid_statuses": [
+        {
+          "date": "2024-11-02",
+          "value": "NOC"
+        },
+        {
+          "date": "2024-11-03",
+          "value": "A"
+        },
+        {
+          "date": "2024-11-17",
+          "value": "NOC"
+        },
+        {
+          "date": "2024-11-18",
+          "value": "A"
+        },
+        {
+          "date": "2024-11-19",
+          "value": "NOC"
+        },
+        {
+          "date": "2024-11-22",
+          "value": "NOC"
+        },
+        {
+          "date": "2024-11-24",
+          "value": "A"
+        },
+        {
+          "date": "2024-11-25",
+          "value": "NOC"
+        }
+      ],
+      "missing_dates": [],
+      "extra_dates": []
+    }
+  ]
+}
